@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "../components/header/header";
 import Sidebar from "../components/sidebar/sidebar";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 // Basic Authentication Check
 // Check User Session

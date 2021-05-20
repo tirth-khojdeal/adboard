@@ -15,7 +15,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import logo from "../../assets/logo.jpg";
+// import logo from "../../assets/logo.jpg";
 const drawerWidth = 240;
 const smalldrawerWidth = 73; 
 const useStyles = makeStyles((theme) => ({
@@ -39,16 +39,14 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   menuButton: {
-    marginRight: 36,
+    // marginRight: 36,
+    marginRight: theme.spacing(2),
   },
   hide: {
     display: "none",
   },
   grow: {
     flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
   },
   title: {
     display: "none",
