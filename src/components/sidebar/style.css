@@ -1,0 +1,19 @@
+.MuiListItem-button{
+    background-color: var(--bg-primary);
+    margin: 2px;
+}
+@media (min-width: 600px){
+.logo-h {
+    min-height: 64px;
+}}
+@media (min-width: 0px) and (orientation: landscape){
+.logo-h {
+    min-height: 48px;
+}
+}
+.logo-h {
+    min-height: 56px;
+}
+.btn{
+    background-color: var(--bg-secondary);
+}
