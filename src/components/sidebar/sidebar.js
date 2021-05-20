@@ -13,7 +13,7 @@ import logoicon from "../../assets/nlogo_icon.jpg";
 import { Button, Paper } from "@material-ui/core";
 import "./style.css";
 
-const drawerWidth = 240;
+const drawerWidth = 180;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -115,7 +115,7 @@ export default function Sidebar(props) {
                 </div>
               </Button>
             )}
-            {val ? (
+            {!val ? (
               <div>
                 {text.sub
                   ? text.sub.map((sub) => (

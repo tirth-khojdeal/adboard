@@ -16,7 +16,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 // import logo from "../../assets/logo.jpg";
-const drawerWidth = 240;
+const drawerWidth = 180;
 const smalldrawerWidth = 73; 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -222,6 +222,7 @@ export default function Header(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
+          <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -235,7 +236,6 @@ export default function Header(props) {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
-          <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
