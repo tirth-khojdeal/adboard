@@ -14,6 +14,28 @@
 .logo-h {
     min-height: 56px;
 }
+/* .btn-area{
+    display: grid;
+    place-items: center;
+} */
 .btn{
     background-color: var(--bg-secondary);
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    padding:10px 10px;
+    justify-content:center;
+    text-decoration: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+}
+.sbtn-area{
+    display: flex;
+    flex-direction: column;
 }

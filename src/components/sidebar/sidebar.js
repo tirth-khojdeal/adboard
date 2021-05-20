@@ -1,22 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
-import { makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
-// import IconButton from "@material-ui/core/IconButton";
-// import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-// import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-// import logo from '../../assets/logo.jpg';
 import nlogo from "../../assets/nlogo.jpg";
-import logoicon from '../../assets/logo_icon.jpg';
-import { Paper } from "@material-ui/core";
-import './style.css'
+import logoicon from "../../assets/nlogo_icon.jpg";
+import { Button, Paper } from "@material-ui/core";
+import "./style.css";
 
 const drawerWidth = 240;
 
@@ -57,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Sidebar(props) {
   const classes = useStyles();
   // const theme = useTheme();
+  const [val, setVal] = useState(true);
 
   return (
     <Drawer
@@ -82,25 +78,60 @@ export default function Sidebar(props) {
         </IconButton>
       </div> */}
       <Divider />
-      <Paper>
+      <Paper elevation={4}>
         {props.open ? (
           <ListItemIcon className="logo-h">
             <img src={nlogo} alt="" width="auto" />
           </ListItemIcon>
         ) : (
           <ListItemIcon className="MuiToolbar-regular">
-            <img src={logoicon} alt="" width="auto" />
+            <img src={logoicon} alt="" width="auto" height="50px" />
           </ListItemIcon>
         )}
       </Paper>
       <List>
-        {["Dashboard", "Inbox", "Starred"].map((text, index) => (
-          <ListItem className="btn" button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {[
+          { name: "Dashboard", sub: ["Sub 1", "Sub 2", "Sub 3"] },
+          { name: "Inbox" },
+          { name: "Starred" },
+        ].map((text, index) => (
+          <div key={index} className="btn-area">
+            {!props.open ? (
+              <Button>
+                <InboxIcon />
+              </Button>
+            ) : (
+              <Button>
+                <div className="btn" onClick={() => setVal(!val)}>
+                  <InboxIcon />
+                  {text.name}
+                  {val ? (
+                    <ChevronRightIcon />
+                  ) : (
+                    <>
+                      <KeyboardArrowDownOutlinedIcon />
+                    </>
+                  )}
+                </div>
+              </Button>
+            )}
+            {val ? (
+              <div>
+                {text.sub
+                  ? text.sub.map((sub) => (
+                      <div className="sbtn-area" key={sub}>
+                        <Button>
+                          <ChevronRightIcon />
+                          {sub}
+                        </Button>
+                      </div>
+                    ))
+                  : ""}
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         ))}
       </List>
       <Divider />
