@@ -1,0 +1,17 @@
+.header-acc-flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.header-bar{
+    margin-left: 10px;
+    border-right: 1px solid rgb(99, 96, 96);
+}
+.header-acc-text1{
+     font-size: 1rem;
+     font-weight: 600;
+}
+.header-acc-text2{
+     font-size: 0.8rem;
+}

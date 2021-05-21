@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import nlogo from "../../assets/nlogo.jpg";
-import logoicon from "../../assets/nlogo_icon.jpg";
-import { Button, Paper } from "@material-ui/core";
+import logo from "../../assets/logo.svg";
+import mlogo from "../../assets/mlogo.svg";
+import {Paper} from "@material-ui/core";
 import "./style.css";
 
 const drawerWidth = 180;
@@ -68,28 +67,19 @@ export default function Sidebar(props) {
         }),
       }}
     >
-      {/* <div className={classes.toolbar}>
-        <IconButton onClick={props.handleDrawerClose}>
-          {theme.direction === "rtl" ? (
-            <ChevronRightIcon />
-          ) : (
-            <ChevronLeftIcon />
-          )}
-        </IconButton>
-      </div> */}
       <Divider />
       <Paper elevation={4}>
         {props.open ? (
           <ListItemIcon className="logo-h">
-            <img src={nlogo} alt="" width="auto" />
+            <img className="p5" src={logo} alt="" width="auto" />
           </ListItemIcon>
         ) : (
           <ListItemIcon className="MuiToolbar-regular">
-            <img src={logoicon} alt="" width="auto" height="50px" />
+            <img className="p5" src={mlogo} alt="" width="auto" height="50px" />
           </ListItemIcon>
         )}
       </Paper>
-      <List>
+      <div>
         {[
           { name: "Dashboard", sub: ["Sub 1", "Sub 2", "Sub 3"] },
           { name: "Inbox" },
@@ -97,33 +87,37 @@ export default function Sidebar(props) {
         ].map((text, index) => (
           <div key={index} className="btn-area">
             {!props.open ? (
-              <Button>
+              <div
+                className={val ? "btn" : "btn bg-secondary color-white"}
+                onClick={() => setVal(!val)}
+              >
                 <InboxIcon />
-              </Button>
+              </div>
             ) : (
-              <Button>
-                <div className="btn" onClick={() => setVal(!val)}>
-                  <InboxIcon />
-                  {text.name}
-                  {val ? (
-                    <ChevronRightIcon />
-                  ) : (
-                    <>
-                      <KeyboardArrowDownOutlinedIcon />
-                    </>
-                  )}
-                </div>
-              </Button>
+              <div
+                className={val ? "btn" : "btn bg-secondary color-white"}
+                onClick={() => setVal(!val)}
+              >
+                <InboxIcon />
+                {text.name}
+                {val ? (
+                  <ChevronRightIcon />
+                ) : (
+                  <>
+                    <KeyboardArrowDownOutlinedIcon />
+                  </>
+                )}
+              </div>
             )}
             {!val ? (
               <div>
                 {text.sub
                   ? text.sub.map((sub) => (
                       <div className="sbtn-area" key={sub}>
-                        <Button>
+                        <div className="sbtn">
                           <ChevronRightIcon />
                           {sub}
-                        </Button>
+                        </div>
                       </div>
                     ))
                   : ""}
@@ -133,7 +127,7 @@ export default function Sidebar(props) {
             )}
           </div>
         ))}
-      </List>
+      </div>
       <Divider />
     </Drawer>
   );

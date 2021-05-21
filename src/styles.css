@@ -27,6 +27,9 @@
   --bg-tertiary:#FB7E84;
   --bg-quadlitary:#4ADEDE;
 }
+.color-white{
+  color: #fff;
+}
 .bg-primary{
   background-color: #C679F5;
 }

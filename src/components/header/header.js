@@ -15,7 +15,9 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-// import logo from "../../assets/logo.jpg";
+import Brightness2Icon from "@material-ui/icons/Brightness2";
+import './style.css';
+
 const drawerWidth = 180;
 const smalldrawerWidth = 73; 
 const useStyles = makeStyles((theme) => ({
@@ -173,7 +175,7 @@ export default function Header(props) {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      {/* <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -183,7 +185,8 @@ export default function Header(props) {
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
-      </MenuItem>
+      </MenuItem> */}
+      
     </Menu>
   );
 
@@ -195,7 +198,6 @@ export default function Header(props) {
           [classes.appBarShift]: props.open,
         })}
       >
-        {/* <img src={logo} alt="" height="20px" width="240px"/> */}
         <Toolbar>
           <IconButton
             color="inherit"
@@ -220,7 +222,7 @@ export default function Header(props) {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Dashboard
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>
@@ -237,6 +239,10 @@ export default function Header(props) {
             />
           </div>
           <div className={classes.sectionDesktop}>
+            <IconButton color="inherit">
+              <Brightness2Icon />
+            </IconButton>
+
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -247,7 +253,7 @@ export default function Header(props) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
+            {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -256,7 +262,22 @@ export default function Header(props) {
               color="inherit"
             >
               <AccountCircle />
+            </IconButton> */}
+            <span className="header-bar"></span>
+            <IconButton
+              // edge="end"
+              // aria-label="account of current user"
+              // aria-controls={menuId}
+              // aria-haspopup="true"
+              // onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
             </IconButton>
+            <div className="header-acc-flex">
+              <div className="header-acc-text1">Jhon Doe</div>
+              <div className="header-acc-text2">Designation</div>
+            </div>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -271,8 +292,8 @@ export default function Header(props) {
           </div>
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+      {/* {renderMobileMenu} */}
+      {/* {renderMenu} */}
     </div>
   );
 }
