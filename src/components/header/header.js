@@ -18,7 +18,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import './style.css';
 
-const drawerWidth = 180;
+const drawerWidth = 200;
 const smalldrawerWidth = 73; 
 const useStyles = makeStyles((theme) => ({
   appBar: {

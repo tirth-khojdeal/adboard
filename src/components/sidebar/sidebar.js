@@ -2,17 +2,30 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import logo from "../../assets/logo.svg";
 import mlogo from "../../assets/mlogo.svg";
 import {Paper} from "@material-ui/core";
+
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
+import Collapse from "@material-ui/core/Collapse";
+
+
+import IconExpandLess from "@material-ui/icons/ExpandLess";
+import IconExpandMore from "@material-ui/icons/ExpandMore";
+import IconDashboard from "@material-ui/icons/Dashboard";
+import IconShoppingCart from "@material-ui/icons/ShoppingCart";
+import IconPeople from "@material-ui/icons/People";
+import IconBarChart from "@material-ui/icons/BarChart";
 import "./style.css";
 
-const drawerWidth = 180;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,10 +61,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+
 export default function Sidebar(props) {
   const classes = useStyles();
-  // const theme = useTheme();
-  const [val, setVal] = useState(true);
+ const [open, setOpen] = useState(false);
+          function handleClick() {
+            setOpen(!open);
+          }
 
   return (
     <Drawer
@@ -79,55 +96,82 @@ export default function Sidebar(props) {
           </ListItemIcon>
         )}
       </Paper>
-      <div>
-        {[
-          { name: "Dashboard", sub: ["Sub 1", "Sub 2", "Sub 3"] },
-          { name: "Inbox" },
-          { name: "Starred" },
-        ].map((text, index) => (
-          <div key={index} className="btn-area">
-            {!props.open ? (
-              <div
-                className={val ? "btn" : "btn bg-secondary color-white"}
-                onClick={() => setVal(!val)}
-              >
-                <InboxIcon />
-              </div>
-            ) : (
-              <div
-                className={val ? "btn" : "btn bg-secondary color-white"}
-                onClick={() => setVal(!val)}
-              >
-                <InboxIcon />
-                {text.name}
-                {val ? (
-                  <ChevronRightIcon />
-                ) : (
-                  <>
-                    <KeyboardArrowDownOutlinedIcon />
-                  </>
-                )}
-              </div>
-            )}
-            {!val ? (
-              <div>
-                {text.sub
-                  ? text.sub.map((sub) => (
-                      <div className="sbtn-area" key={sub}>
-                        <div className="sbtn">
-                          <ChevronRightIcon />
-                          {sub}
-                        </div>
-                      </div>
-                    ))
-                  : ""}
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        ))}
-      </div>
+      <List component="nav" className={classes.appMenu} disablePadding>
+        <ListItem
+          button
+          onClick={handleClick}
+          className={open ? "btn" : "btn bg-secondary color-white"}
+        >
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconDashboard />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+          {open ? <IconExpandLess /> : <IconExpandMore />}
+        </ListItem>
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <Divider />
+          <List component="div" disablePadding>
+            <ListItem button className={classes.menuItem}>
+              <ChevronRightIcon />
+              <ListItemText inset primary="Sub 1" />
+            </ListItem>
+            <ListItem button className={classes.menuItem}>
+              <ChevronRightIcon />
+              <ListItemText inset primary="Sub 2" />
+            </ListItem>
+            <ListItem button className={classes.menuItem}>
+              <ChevronRightIcon />
+              <ListItemText inset primary="Sub 3" />
+            </ListItem>
+          </List>
+        </Collapse>
+
+        <ListItem button className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconShoppingCart />
+          </ListItemIcon>
+          <ListItemText primary="Charts" />
+        </ListItem>
+
+        <ListItem button className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconBarChart />
+          </ListItemIcon>
+          <ListItemText primary="Reports" />
+        </ListItem>
+
+        <ListItem button className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconPeople />
+          </ListItemIcon>
+          <ListItemText primary="Form" />
+        </ListItem>
+        <ListItem button className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconPeople />
+          </ListItemIcon>
+          <ListItemText primary="Table" />
+        </ListItem>
+
+        {/* <ListItem button onClick={handleClick} className={classes.menuItem}>
+          <ListItemIcon className={classes.menuItemIcon}>
+            <IconLibraryBooks />
+          </ListItemIcon>
+          <ListItemText primary="Nested Pages" />
+          {open ? <IconExpandLess /> : <IconExpandMore />}
+        </ListItem> */}
+        {/* <Collapse in={open} timeout="auto" unmountOnExit>
+          <Divider />
+          <List component="div" disablePadding>
+            <ListItem button className={classes.menuItem}>
+              <ListItemText inset primary="Nested Page 1" />
+            </ListItem>
+            <ListItem button className={classes.menuItem}>
+              <ListItemText inset primary="Nested Page 2" />
+            </ListItem>
+          </List>
+        </Collapse> */}
+      </List>
       <Divider />
     </Drawer>
   );
