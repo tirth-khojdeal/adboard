@@ -3,11 +3,10 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import logo from "../../assets/logo.svg";
 import mlogo from "../../assets/mlogo.svg";
-import {Paper} from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -15,7 +14,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import Collapse from "@material-ui/core/Collapse";
-
 
 import IconExpandLess from "@material-ui/icons/ExpandLess";
 import IconExpandMore from "@material-ui/icons/ExpandMore";
@@ -62,13 +60,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function Sidebar(props) {
   const classes = useStyles();
- const [open, setOpen] = useState(false);
-          function handleClick() {
-            setOpen(!open);
-          }
+  const [open, setOpen] = useState(false);
+  const [toggle, setToggle] = useState();
+
+  const handleClick6 = () => {
+    setToggle(6);
+    props.getToggle(toggle);
+  };
 
   return (
     <Drawer
@@ -98,11 +98,14 @@ export default function Sidebar(props) {
       </Paper>
       <List component="nav" className={classes.appMenu} disablePadding>
         <ListItem
-          button
-          onClick={handleClick}
-          className={open ? "btn" : "btn bg-secondary color-white"}
+          onClick={() => {
+            setOpen(!open);
+            setToggle(1);
+            props.getToggle(toggle);
+          }}
+          className={open ? "bg-secondary color-white" : ""}
         >
-          <ListItemIcon className={classes.menuItemIcon}>
+          <ListItemIcon>
             <IconDashboard />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
@@ -111,66 +114,78 @@ export default function Sidebar(props) {
         <Collapse in={open} timeout="auto" unmountOnExit>
           <Divider />
           <List component="div" disablePadding>
-            <ListItem button className={classes.menuItem}>
+            <ListItem button>
               <ChevronRightIcon />
               <ListItemText inset primary="Sub 1" />
             </ListItem>
-            <ListItem button className={classes.menuItem}>
+            <ListItem button>
               <ChevronRightIcon />
               <ListItemText inset primary="Sub 2" />
             </ListItem>
-            <ListItem button className={classes.menuItem}>
+            <ListItem button>
               <ChevronRightIcon />
               <ListItemText inset primary="Sub 3" />
             </ListItem>
           </List>
         </Collapse>
 
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
+        <ListItem
+          button
+          onClick={() => {
+            setToggle(2);
+            props.getToggle(toggle);
+          }}
+        >
+          <ListItemIcon>
             <IconShoppingCart />
           </ListItemIcon>
           <ListItemText primary="Charts" />
         </ListItem>
 
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
+        <ListItem
+          button
+          onClick={() => {
+            setToggle(3);
+            props.getToggle(toggle);
+          }}
+        >
+          <ListItemIcon>
+            <IconBarChart />
+          </ListItemIcon>
+          <ListItemText primary="Analyze" />
+        </ListItem>
+
+        <ListItem
+          button
+          onClick={() => {
+            setToggle(4);
+            props.getToggle(toggle);
+          }}
+        >
+          <ListItemIcon>
             <IconBarChart />
           </ListItemIcon>
           <ListItemText primary="Reports" />
         </ListItem>
 
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
-            <IconPeople />
+        <ListItem
+          button
+          onClick={() => {
+            setToggle(5);
+            props.getToggle(toggle);
+          }}
+        >
+          <ListItemIcon>
+            <InboxIcon />
           </ListItemIcon>
           <ListItemText primary="Form" />
         </ListItem>
-        <ListItem button className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
+        <ListItem button onClick={handleClick6}>
+          <ListItemIcon>
             <IconPeople />
           </ListItemIcon>
           <ListItemText primary="Table" />
         </ListItem>
-
-        {/* <ListItem button onClick={handleClick} className={classes.menuItem}>
-          <ListItemIcon className={classes.menuItemIcon}>
-            <IconLibraryBooks />
-          </ListItemIcon>
-          <ListItemText primary="Nested Pages" />
-          {open ? <IconExpandLess /> : <IconExpandMore />}
-        </ListItem> */}
-        {/* <Collapse in={open} timeout="auto" unmountOnExit>
-          <Divider />
-          <List component="div" disablePadding>
-            <ListItem button className={classes.menuItem}>
-              <ListItemText inset primary="Nested Page 1" />
-            </ListItem>
-            <ListItem button className={classes.menuItem}>
-              <ListItemText inset primary="Nested Page 2" />
-            </ListItem>
-          </List>
-        </Collapse> */}
       </List>
       <Divider />
     </Drawer>

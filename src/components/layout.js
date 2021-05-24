@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "../components/header/header";
 import Sidebar from "../components/sidebar/sidebar";
-import Footer from "./footer";
 import Content from "./content";
-// import Footer from "./footer";
 
 // Basic Authentication Check
 // Check User Session
@@ -40,9 +38,14 @@ export default function MiniDrawer() {
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+
+  const [togglevalue, setToggleValue] = useState();
+  const getToggle = (toggle) => {
+    setToggleValue(toggle);
   };
 
   return (
@@ -56,9 +59,10 @@ export default function MiniDrawer() {
       <Sidebar
         handleDrawerOpen={handleDrawerOpen}
         handleDrawerClose={handleDrawerClose}
+        getToggle={getToggle}
         open={open}
       />
-      <Content/>
+      <Content togglevalue={togglevalue} />
       {/* Routes Might Come In Here */}
       {/* <main className={classes.content}>
         <div className={classes.toolbar} />
