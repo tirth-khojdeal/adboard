@@ -22,10 +22,10 @@
   display: block;
 }
 :root{
-  --bg-primary:#C679F5;
-  --bg-secondary:#797EF6;
-  --bg-tertiary:#FB7E84;
-  --bg-quadlitary:#4ADEDE;
+  --bg-primary:#C679F5 !important;
+  --bg-secondary:#797EF6 !important;
+  --bg-tertiary:#FB7E84 !important;
+  --bg-quadlitary:#4ADEDE !important;
 }
 .color-white{
   color: #fff;
@@ -34,15 +34,11 @@
   background-color: #C679F5;
 }
 .bg-secondary{
-  background-color: #797EF6;
+  background-color: #797EF6 !important;
 }
 .bg-tertiary{
   background-color: #FB7E84;
 }
 .bg-quadlitary{
   background-color: #4ADEDE;
-}
-.MuiListItem-button{
-    background-color: var(--bg-primary);
-    margin: 2px;
 }
