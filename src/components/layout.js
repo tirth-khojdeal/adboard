@@ -4,6 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "../components/header/header";
 import Sidebar from "../components/sidebar/sidebar";
 import Content from "./content";
+import { BrowserRouter } from "react-router-dom";
 
 // Basic Authentication Check
 // Check User Session
@@ -50,24 +51,22 @@ export default function MiniDrawer() {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
-      <Header
-        handleDrawerOpen={handleDrawerOpen}
-        handleDrawerClose={handleDrawerClose}
-        open={open}
-      />
-      <Sidebar
-        handleDrawerOpen={handleDrawerOpen}
-        handleDrawerClose={handleDrawerClose}
-        getToggle={getToggle}
-        open={open}
-      />
-      <Content togglevalue={togglevalue} />
       {/* Routes Might Come In Here */}
-      {/* <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Footer />
-      </main> */}
+      <BrowserRouter>
+        <CssBaseline />
+        <Header
+          handleDrawerOpen={handleDrawerOpen}
+          handleDrawerClose={handleDrawerClose}
+          open={open}
+        />
+        <Sidebar
+          handleDrawerOpen={handleDrawerOpen}
+          handleDrawerClose={handleDrawerClose}
+          getToggle={getToggle}
+          open={open}
+        />
+        <Content togglevalue={togglevalue} />
+      </BrowserRouter>
     </div>
   );
 }           

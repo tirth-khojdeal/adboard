@@ -18,10 +18,13 @@ import Collapse from "@material-ui/core/Collapse";
 import IconExpandLess from "@material-ui/icons/ExpandLess";
 import IconExpandMore from "@material-ui/icons/ExpandMore";
 import IconDashboard from "@material-ui/icons/Dashboard";
-import IconShoppingCart from "@material-ui/icons/ShoppingCart";
-import IconPeople from "@material-ui/icons/People";
+import TableChartIcon from "@material-ui/icons/TableChart";
+import TimelineIcon from "@material-ui/icons/Timeline";
 import IconBarChart from "@material-ui/icons/BarChart";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 200;
 
@@ -97,95 +100,89 @@ export default function Sidebar(props) {
         )}
       </Paper>
       <List component="nav" className={classes.appMenu} disablePadding>
-        <ListItem
-          onClick={() => {
-            setOpen(!open);
-            setToggle(1);
-            props.getToggle(toggle);
-          }}
-          className={open ? "bg-secondary color-white" : ""}
-        >
-          <ListItemIcon>
-            <IconDashboard />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-          {open ? <IconExpandLess /> : <IconExpandMore />}
-        </ListItem>
+        <Link to="/">
+          <ListItem
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className={open ? "bg-secondary color-white" : ""}
+          >
+            <ListItemIcon>
+              <IconDashboard />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" />
+            {open ? <IconExpandLess /> : <IconExpandMore />}
+          </ListItem>
+        </Link>
+
         <Collapse in={open} timeout="auto" unmountOnExit>
           <Divider />
           <List component="div" disablePadding>
-            <ListItem button>
-              <ChevronRightIcon />
-              <ListItemText inset primary="Sub 1" />
-            </ListItem>
-            <ListItem button>
-              <ChevronRightIcon />
-              <ListItemText inset primary="Sub 2" />
-            </ListItem>
-            <ListItem button>
-              <ChevronRightIcon />
-              <ListItemText inset primary="Sub 3" />
-            </ListItem>
+            <Link to="/sub1">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 1" />
+              </ListItem>
+            </Link>
+            <Link to="/sub2">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 2" />
+              </ListItem>
+            </Link>
+            <Link to="/sub3">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 3" />
+              </ListItem>
+            </Link>
           </List>
         </Collapse>
 
-        <ListItem
-          button
-          onClick={() => {
-            setToggle(2);
-            props.getToggle(toggle);
-          }}
-        >
-          <ListItemIcon>
-            <IconShoppingCart />
-          </ListItemIcon>
-          <ListItemText primary="Charts" />
-        </ListItem>
+        <Link to="/charts">
+          <ListItem>
+            <ListItemIcon>
+              <TimelineIcon />
+            </ListItemIcon>
+            <ListItemText primary="Charts" />
+          </ListItem>
+        </Link>
 
-        <ListItem
-          button
-          onClick={() => {
-            setToggle(3);
-            props.getToggle(toggle);
-          }}
-        >
-          <ListItemIcon>
-            <IconBarChart />
-          </ListItemIcon>
-          <ListItemText primary="Analyze" />
-        </ListItem>
+        <Link to="/analyze">
+          <ListItem>
+            <ListItemIcon>
+              <IconBarChart />
+            </ListItemIcon>
+            <ListItemText primary="Analyze" />
+          </ListItem>
+        </Link>
 
-        <ListItem
-          button
-          onClick={() => {
-            setToggle(4);
-            props.getToggle(toggle);
-          }}
-        >
-          <ListItemIcon>
-            <IconBarChart />
-          </ListItemIcon>
-          <ListItemText primary="Reports" />
-        </ListItem>
+        <Link to="/reports">
+          <ListItem>
+            <ListItemIcon>
+              <AssessmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Reports" />
+          </ListItem>
+        </Link>
 
-        <ListItem
-          button
-          onClick={() => {
-            setToggle(5);
-            props.getToggle(toggle);
-          }}
-        >
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText primary="Form" />
-        </ListItem>
-        <ListItem button onClick={handleClick6}>
-          <ListItemIcon>
-            <IconPeople />
-          </ListItemIcon>
-          <ListItemText primary="Table" />
-        </ListItem>
+        <Link to="/form">
+          <ListItem>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Form" />
+          </ListItem>
+        </Link>
+
+        <Link to="/table">
+          <ListItem button onClick={handleClick6}>
+            <ListItemIcon>
+              <TableChartIcon />
+            </ListItemIcon>
+            <ListItemText primary="Table" />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
     </Drawer>
