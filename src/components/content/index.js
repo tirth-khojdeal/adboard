@@ -1,7 +1,6 @@
 import { Container, Paper, Typography } from "@material-ui/core";
 import { Route } from "react-router";
-import Section from "../Section";
-import Demo from "../Section/demo";
+import Demo from "../Section";
 import './style.css';
 
 export default function Content({togglevalue}) {
