@@ -1,5 +1,5 @@
 import React from "react";
-import { useSortBy, useTable, } from "react-table";
+import { usePagination, useSortBy, useTable, } from "react-table";
 
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
@@ -10,6 +10,7 @@ import MtCell from "@material-ui/core/TableCell";
 import MtHead from "@material-ui/core/TableHead";
 import MtRow from "@material-ui/core/TableRow";
 import TableContainer from "@material-ui/core/TableContainer";
+import { Typography } from "@material-ui/core";
 
 const TrTableContainer = withStyles({
   root: {
@@ -35,14 +36,29 @@ export default function Table({ columns, data }) {
     getTableProps, // table props from react-table
     getTableBodyProps, // table body props from react-table
     headerGroups, // headerGroups, if your table has groupings
-    rows, // rows for the table based on the data passed
+    //rows // rows for the table based on the data passed
     prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
+    page, // Instead of using 'rows', we'll use page,
+    // which has only the rows for the active page
+
+    // The rest of these things are super handy, too ;)
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    pageCount,
+    gotoPage,
+    nextPage,
+    previousPage,
+    setPageSize,
+    state: { pageIndex, pageSize },
   } = useTable(
     {
       columns,
       data,
+      initialState: { pageIndex: 2 },
     },
-    useSortBy // This plugin Hook will help to sort our table columns
+    useSortBy, // This plugin Hook will help to sort our table columns
+    usePagination
   );
 
   /* 
@@ -96,7 +112,7 @@ export default function Table({ columns, data }) {
         <MtBody {...getTableBodyProps()}>
           {
             // Loop over the table rows
-            rows.map((row) => {
+            page.map((row) => {
               // Prepare the row for display
               prepareRow(row);
               return (
@@ -122,6 +138,61 @@ export default function Table({ columns, data }) {
           }
         </MtBody>
       </MtTable>
+
+      {/* 
+        Pagination can be built however you'd like. 
+        This is just a very basic UI implementation:
+      */}
+      <div className="pagination">
+        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+          {"<<"}
+        </button>{" "}
+        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+          {"<"}
+        </button>{" "}
+        <button onClick={() => nextPage()} disabled={!canNextPage}>
+          {">"}
+        </button>{" "}
+        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+          {">>"}
+        </button>{" "}
+        <Typography color="primary" component="span">
+          Page{" "}
+          <strong>
+            {pageIndex + 1} of {pageOptions.length}
+          </strong>{" "}
+        </Typography>
+        <span>
+          Page{" "}
+          <strong>
+            {pageIndex + 1} of {pageOptions.length}
+          </strong>{" "}
+        </span>
+        <span>
+          | Go to page:{" "}
+          <input
+            type="number"
+            defaultValue={pageIndex + 1}
+            onChange={(e) => {
+              const page = e.target.value ? Number(e.target.value) - 1 : 0;
+              gotoPage(page);
+            }}
+            style={{ width: "100px" }}
+          />
+        </span>{" "}
+        <select
+          value={pageSize}
+          onChange={(e) => {
+            setPageSize(Number(e.target.value));
+          }}
+        >
+          {[10, 20, 30, 40, 50].map((pageSize) => (
+            <option key={pageSize} value={pageSize}>
+              Show {pageSize}
+            </option>
+          ))}
+        </select>
+      </div>
     </TrTableContainer>
   );
 }

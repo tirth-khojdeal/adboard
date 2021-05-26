@@ -100,7 +100,7 @@ export default function Sidebar(props) {
         )}
       </Paper>
       <List component="nav" className={classes.appMenu} disablePadding>
-        <Link to="/">
+        {/* <Link to="/">
           <ListItem
             onClick={() => {
               setOpen(!open);
@@ -113,9 +113,9 @@ export default function Sidebar(props) {
             <ListItemText primary="Dashboard" />
             {open ? <IconExpandLess /> : <IconExpandMore />}
           </ListItem>
-        </Link>
+        </Link> */}
 
-        <Collapse in={open} timeout="auto" unmountOnExit>
+        {/* <Collapse in={open} timeout="auto" unmountOnExit>
           <Divider />
           <List component="div" disablePadding>
             <Link to="/sub1">
@@ -137,19 +137,24 @@ export default function Sidebar(props) {
               </ListItem>
             </Link>
           </List>
-        </Collapse>
+        </Collapse> */}
 
-        <Link to="/charts">
+        {/* <Link to="/charts">
           <ListItem>
             <ListItemIcon>
               <TimelineIcon />
             </ListItemIcon>
             <ListItemText primary="Charts" />
           </ListItem>
-        </Link>
+        </Link> */}
 
         <Link to="/analyze">
-          <ListItem>
+          <ListItem
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className={open ? "bg-secondary color-white" : ""}
+          >
             <ListItemIcon>
               <IconBarChart />
             </ListItemIcon>
@@ -157,23 +162,23 @@ export default function Sidebar(props) {
           </ListItem>
         </Link>
 
-        <Link to="/reports">
+        {/* <Link to="/reports">
           <ListItem>
             <ListItemIcon>
               <AssessmentIcon />
             </ListItemIcon>
             <ListItemText primary="Reports" />
           </ListItem>
-        </Link>
+        </Link> */}
 
-        <Link to="/form">
+        {/* <Link to="/form">
           <ListItem>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
             <ListItemText primary="Form" />
           </ListItem>
-        </Link>
+        </Link> */}
 
         <Link to="/table">
           <ListItem button onClick={handleClick6}>
