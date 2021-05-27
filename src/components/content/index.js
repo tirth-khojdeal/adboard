@@ -8,7 +8,7 @@ export default function Content({togglevalue}) {
   return (
     <div className="content-root">
       <Container maxWidth="lg">
-        <Paper className="content-welcome-msg" elevation={4}>
+        <Paper className="content-welcome-msg" elevation={3}>
           <Route exact path="/">
             <Typography component="div" style={{ height: "50vh" }}>
               <h1>Welcome to our Board</h1>

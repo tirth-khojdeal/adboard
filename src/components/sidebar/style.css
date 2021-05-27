@@ -1,58 +1,76 @@
-.MuiListItem-button{
-    background-color: var(--bg-primary);
-    margin: 2px;
+.MuiListItem-button {
+  background-color: var(--bg-primary);
+  margin: 2px;
 }
-@media (min-width: 600px){
-.logo-h {
+@media (min-width: 600px) {
+  .logo-h {
     min-height: 64px;
-}}
-@media (min-width: 0px) and (orientation: landscape){
-.logo-h {
+  }
+}
+@media (min-width: 0px) and (orientation: landscape) {
+  .logo-h {
     min-height: 48px;
-}
+  }
 }
 .logo-h {
-    min-height: 56px;
+  min-height: 56px;
 }
 /* .btn-area{
     display: grid;
     place-items: center;
 } */
-.btn{
-    /* width: 100%; */
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-    padding:10px 10px;
-   justify-content: space-between;
-    text-decoration: none;
-    margin: 16px 5px;
-    border-radius: 2px;
+.btn {
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: 16px 5px;
+  border-radius: 2px;
 }
-.sbtn{
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
-    box-sizing: border-box;
-    text-align: center;
-    align-items: center;
-    padding:10px 10px;
-justify-content: center;
-    text-decoration: none;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    border-radius: 2px;
+.sbtn {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  padding: 10px 10px;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 2px;
 }
-.sbtn-area{
-    display: flex;
-    flex-direction: column;
+.sbtn-area {
+  display: flex;
+  flex-direction: column;
 }
-.p5{
-    padding: 5px 5px 5px 15px;
+.p5 {
+  padding: 5px;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+.MuiPaper-root {
+  text-align: center !important;
+}
+.bg-secondary {
+  background-color: #9fb3ca !important;
+  border-radius: 40px;
+  width: 97% !important;
+  margin: auto;
+}
+.MuiDivider-root {
+  background: 0px !important;
+}
+.MuiListItem-gutters {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 5px !important;
 }

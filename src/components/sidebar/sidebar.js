@@ -7,7 +7,7 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import logo from "../../assets/logo.svg";
 import mlogo from "../../assets/mlogo.svg";
 import { Paper } from "@material-ui/core";
-
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -88,7 +88,7 @@ export default function Sidebar(props) {
       }}
     >
       <Divider />
-      <Paper elevation={0}>
+      <Paper elevation={0} >
         {props.open ? (
           <ListItemIcon className="logo-h">
             <img className="p5" src={logo} alt="" width="auto" />
@@ -120,33 +120,15 @@ export default function Sidebar(props) {
           <List component="div" disablePadding>
             <Link to="/sub1">
               <ListItem>
-                <ChevronRightIcon />
+              <FiberManualRecordIcon style={{fontSize:10+"px"}} />
                 <ListItemText inset primary="Sub 1" />
               </ListItem>
             </Link>
-            <Link to="/sub2">
-              <ListItem>
-                <ChevronRightIcon />
-                <ListItemText inset primary="Sub 2" />
-              </ListItem>
-            </Link>
-            <Link to="/sub3">
-              <ListItem>
-                <ChevronRightIcon />
-                <ListItemText inset primary="Sub 3" />
-              </ListItem>
-            </Link>
+        
           </List>
         </Collapse> */}
 
-        {/* <Link to="/charts">
-          <ListItem>
-            <ListItemIcon>
-              <TimelineIcon />
-            </ListItemIcon>
-            <ListItemText primary="Charts" />
-          </ListItem>
-        </Link> */}
+ 
 
         <Link to="/analyze">
           <ListItem
@@ -162,32 +144,15 @@ export default function Sidebar(props) {
           </ListItem>
         </Link>
 
-        {/* <Link to="/reports">
+        <Link to="/automate">
           <ListItem>
             <ListItemIcon>
               <AssessmentIcon />
             </ListItemIcon>
-            <ListItemText primary="Reports" />
+            <ListItemText primary="Automate" />
           </ListItem>
-        </Link> */}
+        </Link> 
 
-        {/* <Link to="/form">
-          <ListItem>
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary="Form" />
-          </ListItem>
-        </Link> */}
-
-        <Link to="/table">
-          <ListItem button onClick={handleClick6}>
-            <ListItemIcon>
-              <TableChartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Table" />
-          </ListItem>
-        </Link>
       </List>
       {/* <Divider /> */}
     </Drawer>

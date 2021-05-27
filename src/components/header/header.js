@@ -17,6 +17,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import './style.css';
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const drawerWidth = 200;
 const smalldrawerWidth = 73; 
@@ -82,6 +83,8 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: "inherit",
+    background:"#eee",
+    borderRadius:"40px",
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -195,12 +198,12 @@ export default function Header(props) {
   );
 
   return (
-    <div className={classes.grow}>
-      <AppBar
-        elevation={0}
+    <div className={classes.grow }>
+      <AppBar  elevation={0} 
         position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: props.open,
+        className={ clsx(classes.appBar, {
+          [classes.appBarShift]: props.open, 
+          
         })}
       >
         <Toolbar>
@@ -232,7 +235,7 @@ export default function Header(props) {
           <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              <SearchIcon />
+              <SearchIcon style={{zIndex:9}}/>
             </div>
             <InputBase
               placeholder="Search…"
