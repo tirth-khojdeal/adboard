@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MiniDrawer() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -54,7 +54,7 @@ export default function MiniDrawer() {
       {/* Routes Might Come In Here */}
       <BrowserRouter>
         <CssBaseline />
-        <Header
+        <Header 
           handleDrawerOpen={handleDrawerOpen}
           handleDrawerClose={handleDrawerClose}
           open={open}
