@@ -1,16 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { usePagination, useSortBy, useTable, useExpanded } from "react-table";
-
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
-
 import MtTable from "@material-ui/core/Table";
 import MtBody from "@material-ui/core/TableBody";
 import MtCell from "@material-ui/core/TableCell";
 import MtHead from "@material-ui/core/TableHead";
 import MtRow from "@material-ui/core/TableRow";
 import TableContainer from "@material-ui/core/TableContainer";
-import { Typography } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 
 const TrTableContainer = withStyles({
   root: {
@@ -22,7 +20,6 @@ const TrTableContainer = withStyles({
     boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
   },
 })(TableContainer);
-
 const TrMtRow=withStyles({
     root:{
         backgroundColor:"#797ef6",
@@ -30,18 +27,13 @@ const TrMtRow=withStyles({
     }
 })(MtRow);
 
-export default function Table({ columns, data }) {
-  // Use the useTable Hook to send the columns and data to build the table
+export default function Table({ columns: userColumns, data, renderRowSubComponent }) {
   const {
     getTableProps, // table props from react-table
     getTableBodyProps, // table body props from react-table
     headerGroups, // headerGroups, if your table has groupings
-    //rows, // rows for the table based on the data passed
     prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
     page, // Instead of using 'rows', we'll use page,
-    // which has only the rows for the active page
-
-    // The rest of these things are super handy, too ;)
     canPreviousPage,
     canNextPage,
     pageOptions,
@@ -50,105 +42,94 @@ export default function Table({ columns, data }) {
     nextPage,
     previousPage,
     setPageSize,
+    visibleColumns,
     state: { pageIndex, pageSize, expanded },
   } = useTable(
     {
-      columns,
+      columns: userColumns,
       data,
-      initialState: { pageIndex: 1 },
+      initialState: { pageIndex: 1, expanded: { 3: true } },
     },
-    useSortBy, // This plugin Hook will help to sort our table columns
-        useExpanded,
-    usePagination,
-
+    useSortBy,
+    useExpanded,
+    usePagination
   );
-
-  /* 
-    Render the UI for your table
-    - react-table doesn't have UI, it's headless. We just need to put the react-table props from the Hooks, and it will do its magic automatically
-  */
   return (
     <TrTableContainer component={Paper}>
-      {/* apply the table props */}
       <MtTable {...getTableProps()}>
         <MtHead>
-          {
-            // Loop over the header rows
-            headerGroups.map((headerGroup) => (
-              // Apply the header row props
-              <TrMtRow {...headerGroup.getHeaderGroupProps()}>
-                {
-                  // Loop over the headers in each row
-                  headerGroup.headers.map((column) => (
-                    // Apply the header cell props
-                    <MtCell
-                      {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className={
-                        column.isSorted
-                          ? column.isSortedDesc
-                            ? "sort-desc"
-                            : "sort-asc"
-                          : ""
-                      }
-                    >
-                      {
-                        // Render the header
-                        column.render("Header")
-                      }
-                      {/* Add a sort direction indicator */}
-                      <span>
-                        {column.isSorted
-                          ? column.isSortedDesc
-                            ? " 🔽"
-                            : " 🔼"
-                          : ""}
-                      </span>
-                    </MtCell>
-                  ))
-                }
-              </TrMtRow>
-            ))
-          }
-        </MtHead>
-        {/* Apply the table body props */}
-        <MtBody {...getTableBodyProps()}>
-          {
-            // Loop over the table rows
-            page.map((row) => {
-              // Prepare the row for display
-              prepareRow(row);
-              return (
-                // Apply the row props
-                <MtRow {...row.getRowProps()}>
-                  {
-                    // Loop over the rows cells
-                    row.cells.map((cell) => {
-                      // Apply the cell props
-                      return (
-                        <MtCell {...cell.getCellProps()}>
-                          {
-                            // Render the cell contents
-                            cell.render("Cell")
-                          }
-                        </MtCell>
-                      );
-                    })
+          {headerGroups.map((headerGroup) => (
+            <TrMtRow {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map((column) => (
+                <MtCell
+                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                  className={
+                    column.isSorted
+                      ? column.isSortedDesc
+                        ? "sort-desc"
+                        : "sort-asc"
+                      : ""
                   }
+                >
+                  {column.render("Header")}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? " 🔽"
+                        : " 🔼"
+                      : ""}
+                  </span>
+                </MtCell>
+              ))}
+            </TrMtRow>
+          ))}
+        </MtHead>
+
+        <MtBody {...getTableBodyProps()}>
+          {page.map((row, i) => {
+            // Prepare the row for display
+            prepareRow(row);
+            return (
+              // <MtRow {...row.getRowProps()}>
+              //   {row.cells.map((cell) => {
+              //     // Apply the cell props
+              //     return (
+              //       <MtCell {...cell.getCellProps()}>
+              //         {
+              //           // Render the cell contents
+              //           cell.render("Cell")
+              //         }
+              //       </MtCell>
+              //     );
+              //   })}
+              // </MtRow>
+              <Fragment key={row.getRowProps().key}>
+                <MtRow>
+                  {row.cells.map((cell) => {
+                    return (
+                      <MtCell {...cell.getCellProps()}>
+                        {cell.render("Cell")}
+                      </MtCell>
+                    );
+                  })}
                 </MtRow>
-              );
-            })
-          }
+                {row.isExpanded && (
+                  <MtRow>
+                    <MtCell colSpan={visibleColumns.length}>
+                      {renderRowSubComponent(row)}
+                    </MtCell>
+                  </MtRow>
+                )}
+              </Fragment>
+            );
+          })}
         </MtBody>
       </MtTable>
-      <div>Showing the first 20 results of {page.length} rows</div>
-      <pre>
-        <code>{JSON.stringify({ expanded: expanded }, null, 2)}</code>
-      </pre>
-      {/* 
-        Pagination can be built however you'd like. 
-        This is just a very basic UI implementation:
-      */}
-      <div className="pagination">
+      <Container
+        color="primary"
+        style={{ backgroundColor: "#797ef6" }}
+        className="pagination"
+      >
         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
           {"<<"}
         </button>{" "}
@@ -167,12 +148,6 @@ export default function Table({ columns, data }) {
             {pageIndex + 1} of {pageOptions.length}
           </strong>{" "}
         </Typography>
-        <span>
-          Page{" "}
-          <strong>
-            {pageIndex + 1} of {pageOptions.length}
-          </strong>{" "}
-        </span>
         <span>
           | Go to page:{" "}
           <input
@@ -197,7 +172,7 @@ export default function Table({ columns, data }) {
             </option>
           ))}
         </select>
-      </div>
+      </Container>
     </TrTableContainer>
   );
 }

@@ -1,31 +1,19 @@
-// App.js
-import { CssBaseline } from "@material-ui/core";
-import './style.css'
-
+import { CssBaseline, Typography } from "@material-ui/core";
+import "./style.css";
 import axios from "axios";
-import React, { useMemo, useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
 import Table from "./Table";
 
-export default function Demo(){
-  /* 
-    - Columns is a simple array right now, but it will contain some logic later on. It is recommended by react-table to memoize the columns data
-    - Here in this example, we have grouped our columns into two headers. react-table is flexible enough to create grouped table headers
-  */
-  // data state to store the TV Maze API data. Its initial value is an empty array
+export default function Demo() {
   const [data, setData] = useState([]);
-
-  // Using useEffect to call the API once mounted and set the data
   useEffect(() => {
     (async () => {
-    //   const result = await axios("https://api.tvmaze.com/search/shows?q=snow");
-    const result = await axios("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    // const response=JSON.parse(result);
+      const result = await axios("data.json", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
       setData(result.data.data);
       console.log(result.data.data);
     })();
@@ -34,55 +22,78 @@ export default function Demo(){
   const columns = React.useMemo(
     () => [
       {
-        // Build our expander column
         id: "expander", // Make sure it has an ID
         Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
           <span {...getToggleAllRowsExpandedProps()}>
             {isAllRowsExpanded ? "👇" : "👉"}
           </span>
         ),
-        Cell: ({ row }) =>
-          // Use the row.canExpand and row.getToggleRowExpandedProps prop getter
-          // to build the toggle for expanding a row
-          row.canExpand ? (
-            <span
-              {...row.getToggleRowExpandedProps({
-                style: {
-                  // We can even use the row.depth property
-                  // and paddingLeft to indicate the depth
-                  // of the row
-                  paddingLeft: `${row.depth * 2}rem`,
-                },
-              })}
-            >
-              {row.isExpanded ? "👇" : "👉"}
-            </span>
-          ) : null,
-      },
-      {
-        Header: "ID",
-        accessor: "id", // accessor is the "key" in the data
+        // Cell: ({ row }) =>
+        //   // Use the row.canExpand and row.getToggleRowExpandedProps prop getter
+        //   row.canExpand ? (
+        //     <span
+        //       {...row.getToggleRowExpandedProps({
+        //         style: {
+        //           paddingLeft: `${row.depth * 2}rem`,
+        //         },
+        //       })}
+        //     >
+        //       {row.isExpanded ? "👇" : "👉"}
+        //     </span>
+        //   ) : null,
+        Cell: ({ row }) => (
+          <span {...row.getToggleRowExpandedProps()}>
+            {row.isExpanded ? "👇" : "👉"}
+          </span>
+        ),
       },
       {
         Header: "NAME",
-        accessor: "name", // accessor is the "key" in the data
+        accessor: "name",
       },
       {
         Header: "STATUS",
-        accessor: "status", // accessor is the "key" in the data
+        accessor: "status",
       },
-      // {
-      //   Header: "INSIGHTS",
-      //   accessor: "insights",
-      // },
+      {
+        Header: "INSIGHTS",
+        accessor: "insights.data[0].clicks",
+      },
     ],
     []
   );
 
+    const renderRowSubComponent = (row) => {
+      const {
+        // name: { first, last },
+        // location: { city, street, postcode },
+        // picture,
+        status,
+        adsets,
+
+      } = row.original;
+      return (
+        <>
+          <div>Hii In Sub Row{JSON.stringify(row.original)}</div>
+          <Typography color="primary">
+            <h1>
+              Value:{status}/
+              {adsets.data[0].id}
+            </h1>
+          </Typography>
+        </>
+      );
+    };
+
+
   return (
     <div className="App">
       <CssBaseline />
-      <Table columns={columns} data={data} />
+      <Table
+        columns={columns}
+        data={data}
+        renderRowSubComponent={renderRowSubComponent}
+      />
     </div>
   );
 }
