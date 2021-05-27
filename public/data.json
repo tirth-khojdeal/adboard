@@ -1,0 +1,633 @@
+{
+"data": [
+{
+"id": "23847763844990436",
+"name": "Nauheed Video",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847763845040436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUmJoeDRlOVR4ZADNpS3hWV2tCV3p4Mkc5SGRrdzQ0M3VZARHZAxZAWVCWEhjQ19ZAamZAZAUlh1Vm51WjRBUFJkc21tNDhMU2tTbkpoNG54YVFOWGg2Si0wSzVB",
+"after": "QVFIUmJoeDRlOVR4ZADNpS3hWV2tCV3p4Mkc5SGRrdzQ0M3VZARHZAxZAWVCWEhjQ19ZAamZAZAUlh1Vm51WjRBUFJkc21tNDhMU2tTbkpoNG54YVFOWGg2Si0wSzVB"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "607",
+"cpc": "5.646178",
+"spend": "3427.23",
+"ctr": "1.470517",
+"reach": "29142",
+"impressions": "41278",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847692776670436",
+"name": "VLCC Facial Kit Product Awareness",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847692776740436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUkhScHJFOU1ZATmJSUEtOYXphNHVpbTB4eEd3SmFsWEk4dGJ2YVdQTDFYZA0ZAZAUjU0eE5tN2FVZAkdaMkV1bDV5NFgybFBFN3JURl9nZAU9vZAWtqT1NtaGJR",
+"after": "QVFIUkhScHJFOU1ZATmJSUEtOYXphNHVpbTB4eEd3SmFsWEk4dGJ2YVdQTDFYZA0ZAZAUjU0eE5tN2FVZAkdaMkV1bDV5NFgybFBFN3JURl9nZAU9vZAWtqT1NtaGJR"
+}
+}
+}
+},
+{
+"id": "23847691662140436",
+"name": "Jan-March Email List",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847691662240436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUmk4XzFITGpUQ05GVDBvREo4MXVJUGsxdmxaZAWpHbm0zX0Jjc0loUm1GWEZAvLWtpRERUeGhtN296V2NBMlRsMVo2ei1xc0VnU3c2MU1oalUtVjRmVDNR",
+"after": "QVFIUmk4XzFITGpUQ05GVDBvREo4MXVJUGsxdmxaZAWpHbm0zX0Jjc0loUm1GWEZAvLWtpRERUeGhtN296V2NBMlRsMVo2ei1xc0VnU3c2MU1oalUtVjRmVDNR"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "327",
+"cpc": "10.489174",
+"spend": "3429.96",
+"ctr": "1.333442",
+"reach": "20319",
+"impressions": "24523",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847665107560436",
+"name": "BO_5Apr_FB_We've talked a lot about Contest_INR1000",
+"status": "ACTIVE",
+"adsets": {
+"data": [
+{
+"id": "23847665107550436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlMtcHVHNy1mUmQ2M3NhM0JxcTNlX0NFLU90ZAXFKQm1iOERKcVlPV2xvbWluY0t2V1dJRFN1V3FadVhtcFZAjMXdDZAEc0UmJIX2o3MnFuazB6YnZAuSnZAR",
+"after": "QVFIUlMtcHVHNy1mUmQ2M3NhM0JxcTNlX0NFLU90ZAXFKQm1iOERKcVlPV2xvbWluY0t2V1dJRFN1V3FadVhtcFZAjMXdDZAEc0UmJIX2o3MnFuazB6YnZAuSnZAR"
+}
+}
+}
+},
+{
+"id": "23847665069890436",
+"name": "BO_5Apr_Insta_We've talked a lot about Contest_INR1000",
+"status": "ACTIVE",
+"adsets": {
+"data": [
+{
+"id": "23847665069870436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUjdVUmJqSHQxY0ZAva2luUXRUdGVLeW5hbzFqOWhzUFFUZAkxCdldDMEo3UmgtZAzA2eG0teEI0LUhFTE1TQ0ZAJSk9JS281RFg2U0c0VzRrbnB4dDZAHU3VR",
+"after": "QVFIUjdVUmJqSHQxY0ZAva2luUXRUdGVLeW5hbzFqOWhzUFFUZAkxCdldDMEo3UmgtZAzA2eG0teEI0LUhFTE1TQ0ZAJSk9JS281RFg2U0c0VzRrbnB4dDZAHU3VR"
+}
+}
+}
+},
+{
+"id": "23847629810200436",
+"name": "catalogue_website",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847629810300436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUi0tRGJFQ2pGUWxja252bzBFN3VNNzdjS25kY1BTVDVYSVVhQXNpWTB6WUxqbWJlQjN3VEw4bmdTb3JMSUFaMVpvWlNNU0JnRlFtN1loaUkyUWRxMDl3",
+"after": "QVFIUi0tRGJFQ2pGUWxja252bzBFN3VNNzdjS25kY1BTVDVYSVVhQXNpWTB6WUxqbWJlQjN3VEw4bmdTb3JMSUFaMVpvWlNNU0JnRlFtN1loaUkyUWRxMDl3"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "508",
+"cpc": "6.788996",
+"spend": "3448.81",
+"ctr": "0.969632",
+"reach": "46588",
+"impressions": "52391",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847614803860436",
+"name": "Phone  Number List",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847614803900436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlFDWHVWNS1Jd2xuRWdvb3c4YzZAYUmN2cnVNbGw5QURxcGtONEs2V1UwaUJySDBBV0NoS2VfbThpVmxMSWt0TlpFdlA3R2JUTzZABd0stQlduZA29WNzdn",
+"after": "QVFIUlFDWHVWNS1Jd2xuRWdvb3c4YzZAYUmN2cnVNbGw5QURxcGtONEs2V1UwaUJySDBBV0NoS2VfbThpVmxMSWt0TlpFdlA3R2JUTzZABd0stQlduZA29WNzdn"
+}
+}
+}
+},
+{
+"id": "23847603064460436",
+"name": "Customer List Lookalike",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847603064520436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlplQVlOcXZABdmMxSmdGRDA3N05YMFJRTThiTFF2TmgtYW9Ib3hiLVd5dzU2VHl2c1JKYUVCVXFNT2R3N1RXQjlGM0VOSUs1VXVwb3FNbnZARVVNZAanpR",
+"after": "QVFIUlplQVlOcXZABdmMxSmdGRDA3N05YMFJRTThiTFF2TmgtYW9Ib3hiLVd5dzU2VHl2c1JKYUVCVXFNT2R3N1RXQjlGM0VOSUs1VXVwb3FNbnZARVVNZAanpR"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "340",
+"cpc": "10.190118",
+"spend": "3464.64",
+"ctr": "1.127732",
+"reach": "25755",
+"impressions": "30149",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847602949710436",
+"name": "Customer List",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847602949810436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUjJtdUc3b2ttZAzdJSUhYY1N4cjM4QmlPbEEtNTRzM0l3RFQ1YlRXMEZAhMHVJVXRmUFRlTVJFQmNNVGlxakFtb2xYUVNpbTlldTZAsbEF6UlU2SHVNWDZAn",
+"after": "QVFIUjJtdUc3b2ttZAzdJSUhYY1N4cjM4QmlPbEEtNTRzM0l3RFQ1YlRXMEZAhMHVJVXRmUFRlTVJFQmNNVGlxakFtb2xYUVNpbTlldTZAsbEF6UlU2SHVNWDZAn"
+}
+}
+}
+},
+{
+"id": "23847599201000436",
+"name": "BO_Conversions_Sales –24 Feb- Interest – Location",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847599200990436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUld2VXRyTmUtRnJ2d3ZAhb1BGRGR0b0N0MEVvellWMUFDenVuVzdwYkVfanRqclRfU082TnFwZAWVkWk5pSWFFRGNWVVVOY1UtVlRYUEpGVXd5bWY0d253",
+"after": "QVFIUld2VXRyTmUtRnJ2d3ZAhb1BGRGR0b0N0MEVvellWMUFDenVuVzdwYkVfanRqclRfU082TnFwZAWVkWk5pSWFFRGNWVVVOY1UtVlRYUEpGVXd5bWY0d253"
+}
+}
+}
+},
+{
+"id": "23847525922170436",
+"name": "BO_Post_Engagement_13March",
+"status": "ACTIVE",
+"adsets": {
+"data": [
+{
+"id": "23847525922190436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlpqS2ZA2S003Y1pvQ3VFYzZA2T25IZAS1lU0pBYUpqZAEJiTlBLS212VzJLbFNreXFzdVVTUXlTbWJUMUhKLThLbl9DdVZAhM3oxclFMOWJNSXdQY3J1emh3",
+"after": "QVFIUlpqS2ZA2S003Y1pvQ3VFYzZA2T25IZAS1lU0pBYUpqZAEJiTlBLS212VzJLbFNreXFzdVVTUXlTbWJUMUhKLThLbl9DdVZAhM3oxclFMOWJNSXdQY3J1emh3"
+}
+}
+}
+},
+{
+"id": "23847492344280436",
+"name": "BO_8Mar_FB_Women’s Day Contest_INR2000",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847492344300436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlBkMjhnODYwRUhUSUI0M191cnlXbGttaVc2TWx2RFdaanRJUVlhWTlMUEQxZAUEyX1puM2w3SGZAKZAlA0STI0WmQ3dkdHQ1lFMkF6NmoyWjJqanpNQmhR",
+"after": "QVFIUlBkMjhnODYwRUhUSUI0M191cnlXbGttaVc2TWx2RFdaanRJUVlhWTlMUEQxZAUEyX1puM2w3SGZAKZAlA0STI0WmQ3dkdHQ1lFMkF6NmoyWjJqanpNQmhR"
+}
+}
+}
+},
+{
+"id": "23847492270590436",
+"name": "BO_8Mar_Insta_Women’s Day Contest_INR2000",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847492270600436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUklyUWw5QWNhcGQ1QjNSWFBpU3AtUmZAfa0dkZAmY3Yk9uUzZAGX2doVVNHZAFRhMHRMcGN3dmdHSXdkM1JPWl9GTU11Vmk2TmRuazBrSDZAMRlpGYUpIdmJ3",
+"after": "QVFIUklyUWw5QWNhcGQ1QjNSWFBpU3AtUmZAfa0dkZAmY3Yk9uUzZAGX2doVVNHZAFRhMHRMcGN3dmdHSXdkM1JPWl9GTU11Vmk2TmRuazBrSDZAMRlpGYUpIdmJ3"
+}
+}
+}
+},
+{
+"id": "23847421334990436",
+"name": "BO_Conversions_Sales –24 Feb- Interest – Men category",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847421335040436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUmpXZAlh5NmZACQ2VaV1cwZAmdtRVpZAdjlsR3psU1lrSnVZAaTRWbXRYM2VhaEtiZAV9DNkVMWGl0Y3EyYXQyVHZAnc0hBaDd5aWlUblhRT1BPd0lSSmRIVGZAR",
+"after": "QVFIUmpXZAlh5NmZACQ2VaV1cwZAmdtRVpZAdjlsR3psU1lrSnVZAaTRWbXRYM2VhaEtiZAV9DNkVMWGl0Y3EyYXQyVHZAnc0hBaDd5aWlUblhRT1BPd0lSSmRIVGZAR"
+}
+}
+}
+},
+{
+"id": "23847416013330436",
+"name": "BO_Conversions_Sales – 24 Feb- ATC - 10Days",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847416013610436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUjdYc1BRdHVMYWE5SGhOZAlk0MnRvQWJZALXNkdVp2WTllMTNPNnYyNlp3YUpHLXdzUWM3dTZAkQkw1UmVWRmtlS0FKNUFSWlRidVZADaUxtbXRJaTN6WEd3",
+"after": "QVFIUjdYc1BRdHVMYWE5SGhOZAlk0MnRvQWJZALXNkdVp2WTllMTNPNnYyNlp3YUpHLXdzUWM3dTZAkQkw1UmVWRmtlS0FKNUFSWlRidVZADaUxtbXRJaTN6WEd3"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "166",
+"cpc": "20.604699",
+"spend": "3420.38",
+"ctr": "2.082811",
+"reach": "1596",
+"impressions": "7970",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847415982260436",
+"name": "BO_Conversions_Sales – 24 Feb-  Look-a-like Custom Purchase -180 Days",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847415982690436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUnBXcmU2dk1nUGdJY3pScjk4bloxanlNLUVET09FU0dnUjg4N19oTjRiT2htUjNvTEEzS2lkSVpyTVlhdDFQUV9KZAFB3WEFJcHlyUzR2SjRnOElnM1ZAR",
+"after": "QVFIUnBXcmU2dk1nUGdJY3pScjk4bloxanlNLUVET09FU0dnUjg4N19oTjRiT2htUjNvTEEzS2lkSVpyTVlhdDFQUV9KZAFB3WEFJcHlyUzR2SjRnOElnM1ZAR"
+}
+}
+}
+},
+{
+"id": "23847415951780436",
+"name": "BO_Conversions_Sales – 24 Feb- custom- FB + Insta Page",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847415952170436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUjE2bVNfNjhZAWTltYW16RXU1d0lzamZA3YUNsTlprenNtajJqSk0xY2dfeUlybTlkR0J0LTNCMV9zUUVqT1VBME5SX2xDdFZAhbDl1TUZADdmxyeFFBZAjFR",
+"after": "QVFIUjE2bVNfNjhZAWTltYW16RXU1d0lzamZA3YUNsTlprenNtajJqSk0xY2dfeUlybTlkR0J0LTNCMV9zUUVqT1VBME5SX2xDdFZAhbDl1TUZADdmxyeFFBZAjFR"
+}
+}
+}
+},
+{
+"id": "23847415933680436",
+"name": "BO_Conversions_Sales –24 Feb- Interest",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847415934090436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlRfMS1VdFo2aWgwVGlQQjhCcW1iMGhuVVREQnlidDg0OW9QLW9iZAWsxOHdMX29NOHY4aTFNbFRFWU5UaF9ORmNpSTJ3Qm1zN1JaR1h1eUk3anNEaGNB",
+"after": "QVFIUlRfMS1VdFo2aWgwVGlQQjhCcW1iMGhuVVREQnlidDg0OW9QLW9iZAWsxOHdMX29NOHY4aTFNbFRFWU5UaF9ORmNpSTJ3Qm1zN1JaR1h1eUk3anNEaGNB"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "359",
+"cpc": "9.546351",
+"spend": "3427.14",
+"ctr": "1.037452",
+"reach": "29279",
+"impressions": "34604",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847415905010436",
+"name": "BO_Conversions_Sales – 24 Feb - Website Visitors",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847415905430436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlkwVWgxaXdaVUpTR1puUUZASa2dWaDlNZAWJDeXd3c1dRUmFRNFI5cGwzWjdibF9ndnYtUWJ4Qzh3cFZAoNWNZAbVdXS2VQMFlGMXF4bTZA4OWtLaDRXZAzZAn",
+"after": "QVFIUlkwVWgxaXdaVUpTR1puUUZASa2dWaDlNZAWJDeXd3c1dRUmFRNFI5cGwzWjdibF9ndnYtUWJ4Qzh3cFZAoNWNZAbVdXS2VQMFlGMXF4bTZA4OWtLaDRXZAzZAn"
+}
+}
+}
+},
+{
+"id": "23847404515200436",
+"name": "BO_Conversions_Sales – Lookalike VLCC Social Page",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847404515600436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUnJaTWk3cW04WWxaSXhQY3NEbzhSMkIycDNaYy1pOE5OX1M1QVl5TnRCSHZAQTnJjNktNX3B2d3lucmZA3QlFoOFNIRUZAnYl9FTEFQcTFXTms0MWFOSUFB",
+"after": "QVFIUnJaTWk3cW04WWxaSXhQY3NEbzhSMkIycDNaYy1pOE5OX1M1QVl5TnRCSHZAQTnJjNktNX3B2d3lucmZA3QlFoOFNIRUZAnYl9FTEFQcTFXTms0MWFOSUFB"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "586",
+"cpc": "5.978089",
+"spend": "3503.16",
+"ctr": "1.15575",
+"reach": "43471",
+"impressions": "50703",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+},
+{
+"id": "23847404468030436",
+"name": "BO_Conversions_Sales – 23 Feb Custom Purchase",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847404468500436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUm45ZAlhYZAkZAZARXBJQlUwNldxaVNDZA3FhZAkVDRTJXOXNVLVhOSHNTWW1RdnpPeGJ6WFk0Szd3NU5nWWlqWWQ0ZAmd6cTlYVkdjcjN3Vi1BR2JjZAVJkbmFn",
+"after": "QVFIUm45ZAlhYZAkZAZARXBJQlUwNldxaVNDZA3FhZAkVDRTJXOXNVLVhOSHNTWW1RdnpPeGJ6WFk0Szd3NU5nWWlqWWQ0ZAmd6cTlYVkdjcjN3Vi1BR2JjZAVJkbmFn"
+}
+}
+}
+},
+{
+"id": "23847398627050436",
+"name": "BO_22Feb_FB_Divyanka Tripathi Post_INR2500",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847398627040436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUmRob1JBRXczb0taTWtBMGQ4V0h2cTRQbDBiZA0xXWDhYdlRKYTlhRHp0c0M3ZAGhFQkdtemV4U1ZAsQ0gtWXhzeHhSdFh4Q3J3ZAmVOX203akhxV3NOaHVn",
+"after": "QVFIUmRob1JBRXczb0taTWtBMGQ4V0h2cTRQbDBiZA0xXWDhYdlRKYTlhRHp0c0M3ZAGhFQkdtemV4U1ZAsQ0gtWXhzeHhSdFh4Q3J3ZAmVOX203akhxV3NOaHVn"
+}
+}
+}
+},
+{
+"id": "23847371309800436",
+"name": "BO_17Feb_Insta_Create a Meme Contest_INR2500",
+"status": "ACTIVE",
+"adsets": {
+"data": [
+{
+"id": "23847371309860436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUkxWdGo3ZAVI3b2xkQnFfMm9BdmVzeFl5WDhGaE55bk9pZADlqN20tc0V0M3pJTWk2YlpvdW14MjF4UEpxX18tVHdXOFpIQXVfSTlGa19DTUdHWU9HTnZAn",
+"after": "QVFIUkxWdGo3ZAVI3b2xkQnFfMm9BdmVzeFl5WDhGaE55bk9pZADlqN20tc0V0M3pJTWk2YlpvdW14MjF4UEpxX18tVHdXOFpIQXVfSTlGa19DTUdHWU9HTnZAn"
+}
+}
+}
+},
+{
+"id": "23847371119880436",
+"name": "BO_17Feb_FB_Create a Meme Contest_INR2500",
+"status": "ACTIVE",
+"adsets": {
+"data": [
+{
+"id": "23847371120160436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUlNDUm05al9HbkxQTS16b3pmM29zZAFhkbUVjM2lQLWVjRS1UQ2pzQlR4VjIwdzI0UDNrUENUdV81dzB1dEhTYUhNLVpmejh2dmpkY2ZA4djdmQmNwdGxR",
+"after": "QVFIUlNDUm05al9HbkxQTS16b3pmM29zZAFhkbUVjM2lQLWVjRS1UQ2pzQlR4VjIwdzI0UDNrUENUdV81dzB1dEhTYUhNLVpmejh2dmpkY2ZA4djdmQmNwdGxR"
+}
+}
+}
+},
+{
+"id": "23847366451890436",
+"name": "BO_Catalogue_Sales",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847723649020436"
+},
+{
+"id": "23847404972860436"
+},
+{
+"id": "23847376799860436"
+},
+{
+"id": "23847366482640436"
+},
+{
+"id": "23847366451910436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUkdkSHlTS2kxZAHc0M2tIMnBRclFYY1ZAza0MzeHpjdmk2di1sN0oxejlad0VYWUJCQXpvQmdJbi1Way1ETktYMU9SMy1EbUJsU0VwNktVYmIyQ0xXNllB",
+"after": "QVFIUkdWWVJCMGdZANWV3dWJIa0w4Wkl3U1gtQWxQMDJ0QlZAjSEdic2UxNExSOUh4UVJwUkF6NzFRVzBpdU0wV2hfak9pS1YzWGNhQzJjTDR1ckVEclBqLWFB"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "1428",
+"cpc": "4.76159",
+"spend": "6799.55",
+"ctr": "1.76305",
+"reach": "56378",
+"impressions": "80996",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUk5kM1hZANUlGSWd5SklEa0kxNU11OVV5SEtsLWVsZA25CNVB2SWtZANDdzeXczaTA5MVR1QjJweldtam9mT1p3RHY4dldDLTcxWGlWUi1KNEU1ZADlBb0xn",
+"after": "QVFIUmZAYWnp6N0ZAEZA1N2ZAjRleDdxUDhMcDE2MFpVOVlqNGhjUXpWcmdFdXNobEUtaDVlUWwyYzEwVWxpYnY5Um1sTTFZAU0lpdGVLN19sd3h3X0lITk4xQy13"
+},
+"next": "https://graph.facebook.com/v10.0/act_311236996426897/campaigns?access_token=EAAB5hYFo0J8BAOCruQZCOclJLLAr0rkaTNSQOH9FiOkPzXrApqo6JZA8dyRhYC4AITF1BBClZCgZAJ4QBCD0BZAdI9ege2WxyvxmvXngFFieQsLD8H9Tx7nFPhWk3yGqzjbxVHKU9KzR0c0eD6tVBdRZAXsjbTvpZAM5l5yCbEpbqnIPHCNfHEr&pretty=1&fields=id%2Cname%2Cstatus%2Cadsets%2Cinsights%7Bclicks%2Ccpc%2Cspend%2Cctr%2Creach%2Cimpressions%7D&limit=25&after=QVFIUmZAYWnp6N0ZAEZA1N2ZAjRleDdxUDhMcDE2MFpVOVlqNGhjUXpWcmdFdXNobEUtaDVlUWwyYzEwVWxpYnY5Um1sTTFZAU0lpdGVLN19sd3h3X0lITk4xQy13"
+}
+}
