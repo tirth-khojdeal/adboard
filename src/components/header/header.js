@@ -18,7 +18,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import './style.css';
 
-const drawerWidth = 180;
+const drawerWidth = 200;
 const smalldrawerWidth = 73; 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -115,9 +115,9 @@ export default function Header(props) {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleProfileMenuOpen = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -162,6 +162,14 @@ export default function Header(props) {
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
+            <Brightness2Icon />
+          </Badge>
+        </IconButton>
+        <p>Theme</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -175,24 +183,21 @@ export default function Header(props) {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      {/* <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
+      <MenuItem>
+        <IconButton aria-label="show 11 new notifications" color="inherit">
+          <Badge badgeContent={11} color="secondary">
+            <AccountCircle />
+          </Badge>
         </IconButton>
-        <p>Profile</p>
-      </MenuItem> */}
-      
+        <p>Account</p>
+      </MenuItem>
     </Menu>
   );
 
   return (
     <div className={classes.grow}>
       <AppBar
+        elevation={0}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: props.open,
@@ -292,8 +297,8 @@ export default function Header(props) {
           </div>
         </Toolbar>
       </AppBar>
-      {/* {renderMobileMenu} */}
-      {/* {renderMenu} */}
+      {renderMobileMenu}
+      {renderMenu}
     </div>
   );
 }

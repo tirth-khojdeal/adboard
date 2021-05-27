@@ -2,17 +2,31 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import KeyboardArrowDownOutlinedIcon from "@material-ui/icons/KeyboardArrowDownOutlined";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import logo from "../../assets/logo.svg";
 import mlogo from "../../assets/mlogo.svg";
-import {Paper} from "@material-ui/core";
-import "./style.css";
+import { Paper } from "@material-ui/core";
 
-const drawerWidth = 180;
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
+import Collapse from "@material-ui/core/Collapse";
+
+import IconExpandLess from "@material-ui/icons/ExpandLess";
+import IconExpandMore from "@material-ui/icons/ExpandMore";
+import IconDashboard from "@material-ui/icons/Dashboard";
+import TableChartIcon from "@material-ui/icons/TableChart";
+import TimelineIcon from "@material-ui/icons/Timeline";
+import IconBarChart from "@material-ui/icons/BarChart";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+
+import "./style.css";
+import { Link } from "react-router-dom";
+
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,10 +62,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 export default function Sidebar(props) {
   const classes = useStyles();
-  // const theme = useTheme();
-  const [val, setVal] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [toggle, setToggle] = useState();
+
+  const handleClick6 = () => {
+    setToggle(6);
+    props.getToggle(toggle);
+  };
 
   return (
     <Drawer
@@ -68,7 +88,7 @@ export default function Sidebar(props) {
       }}
     >
       <Divider />
-      <Paper elevation={4}>
+      <Paper elevation={0}>
         {props.open ? (
           <ListItemIcon className="logo-h">
             <img className="p5" src={logo} alt="" width="auto" />
@@ -79,56 +99,97 @@ export default function Sidebar(props) {
           </ListItemIcon>
         )}
       </Paper>
-      <div>
-        {[
-          { name: "Dashboard", sub: ["Sub 1", "Sub 2", "Sub 3"] },
-          { name: "Inbox" },
-          { name: "Starred" },
-        ].map((text, index) => (
-          <div key={index} className="btn-area">
-            {!props.open ? (
-              <div
-                className={val ? "btn" : "btn bg-secondary color-white"}
-                onClick={() => setVal(!val)}
-              >
-                <InboxIcon />
-              </div>
-            ) : (
-              <div
-                className={val ? "btn" : "btn bg-secondary color-white"}
-                onClick={() => setVal(!val)}
-              >
-                <InboxIcon />
-                {text.name}
-                {val ? (
-                  <ChevronRightIcon />
-                ) : (
-                  <>
-                    <KeyboardArrowDownOutlinedIcon />
-                  </>
-                )}
-              </div>
-            )}
-            {!val ? (
-              <div>
-                {text.sub
-                  ? text.sub.map((sub) => (
-                      <div className="sbtn-area" key={sub}>
-                        <div className="sbtn">
-                          <ChevronRightIcon />
-                          {sub}
-                        </div>
-                      </div>
-                    ))
-                  : ""}
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-        ))}
-      </div>
-      <Divider />
+      <List component="nav" className={classes.appMenu} disablePadding>
+        {/* <Link to="/">
+          <ListItem
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className={open ? "bg-secondary color-white" : ""}
+          >
+            <ListItemIcon>
+              <IconDashboard />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" />
+            {open ? <IconExpandLess /> : <IconExpandMore />}
+          </ListItem>
+        </Link> */}
+
+        {/* <Collapse in={open} timeout="auto" unmountOnExit>
+          <Divider />
+          <List component="div" disablePadding>
+            <Link to="/sub1">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 1" />
+              </ListItem>
+            </Link>
+            <Link to="/sub2">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 2" />
+              </ListItem>
+            </Link>
+            <Link to="/sub3">
+              <ListItem>
+                <ChevronRightIcon />
+                <ListItemText inset primary="Sub 3" />
+              </ListItem>
+            </Link>
+          </List>
+        </Collapse> */}
+
+        {/* <Link to="/charts">
+          <ListItem>
+            <ListItemIcon>
+              <TimelineIcon />
+            </ListItemIcon>
+            <ListItemText primary="Charts" />
+          </ListItem>
+        </Link> */}
+
+        <Link to="/analyze">
+          <ListItem
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className={!open ? "bg-secondary color-white" : ""}
+          >
+            <ListItemIcon>
+              <IconBarChart />
+            </ListItemIcon>
+            <ListItemText primary="Analyze" />
+          </ListItem>
+        </Link>
+
+        {/* <Link to="/reports">
+          <ListItem>
+            <ListItemIcon>
+              <AssessmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Reports" />
+          </ListItem>
+        </Link> */}
+
+        {/* <Link to="/form">
+          <ListItem>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Form" />
+          </ListItem>
+        </Link> */}
+
+        <Link to="/table">
+          <ListItem button onClick={handleClick6}>
+            <ListItemIcon>
+              <TableChartIcon />
+            </ListItemIcon>
+            <ListItemText primary="Table" />
+          </ListItem>
+        </Link>
+      </List>
+      {/* <Divider /> */}
     </Drawer>
   );
 }
