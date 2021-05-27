@@ -1,5 +1,5 @@
 import React from "react";
-import { usePagination, useSortBy, useTable, } from "react-table";
+import { usePagination, useSortBy, useTable, useExpanded } from "react-table";
 
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
@@ -36,7 +36,7 @@ export default function Table({ columns, data }) {
     getTableProps, // table props from react-table
     getTableBodyProps, // table body props from react-table
     headerGroups, // headerGroups, if your table has groupings
-    //rows // rows for the table based on the data passed
+    //rows, // rows for the table based on the data passed
     prepareRow, // Prepare the row (this function needs to be called for each row before getting the row props)
     page, // Instead of using 'rows', we'll use page,
     // which has only the rows for the active page
@@ -50,15 +50,17 @@ export default function Table({ columns, data }) {
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex, pageSize },
+    state: { pageIndex, pageSize, expanded },
   } = useTable(
     {
       columns,
       data,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex: 1 },
     },
     useSortBy, // This plugin Hook will help to sort our table columns
-    usePagination
+        useExpanded,
+    usePagination,
+
   );
 
   /* 
@@ -138,7 +140,10 @@ export default function Table({ columns, data }) {
           }
         </MtBody>
       </MtTable>
-
+      <div>Showing the first 20 results of {page.length} rows</div>
+      <pre>
+        <code>{JSON.stringify({ expanded: expanded }, null, 2)}</code>
+      </pre>
       {/* 
         Pagination can be built however you'd like. 
         This is just a very basic UI implementation:

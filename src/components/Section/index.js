@@ -31,8 +31,34 @@ export default function Demo(){
     })();
   }, []);
 
-  const columns = useMemo(
+  const columns = React.useMemo(
     () => [
+      {
+        // Build our expander column
+        id: "expander", // Make sure it has an ID
+        Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
+          <span {...getToggleAllRowsExpandedProps()}>
+            {isAllRowsExpanded ? "👇" : "👉"}
+          </span>
+        ),
+        Cell: ({ row }) =>
+          // Use the row.canExpand and row.getToggleRowExpandedProps prop getter
+          // to build the toggle for expanding a row
+          row.canExpand ? (
+            <span
+              {...row.getToggleRowExpandedProps({
+                style: {
+                  // We can even use the row.depth property
+                  // and paddingLeft to indicate the depth
+                  // of the row
+                  paddingLeft: `${row.depth * 2}rem`,
+                },
+              })}
+            >
+              {row.isExpanded ? "👇" : "👉"}
+            </span>
+          ) : null,
+      },
       {
         Header: "ID",
         accessor: "id", // accessor is the "key" in the data
@@ -45,10 +71,10 @@ export default function Demo(){
         Header: "STATUS",
         accessor: "status", // accessor is the "key" in the data
       },
-      {
-        Header: "INSIGHTS",
-        accessor: "insights.data[0].clicks",
-      },
+      // {
+      //   Header: "INSIGHTS",
+      //   accessor: "insights",
+      // },
     ],
     []
   );

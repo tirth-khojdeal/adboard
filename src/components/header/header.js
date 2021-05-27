@@ -197,6 +197,7 @@ export default function Header(props) {
   return (
     <div className={classes.grow}>
       <AppBar
+        elevation={0}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: props.open,

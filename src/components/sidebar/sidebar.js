@@ -88,7 +88,7 @@ export default function Sidebar(props) {
       }}
     >
       <Divider />
-      <Paper elevation={4}>
+      <Paper elevation={0}>
         {props.open ? (
           <ListItemIcon className="logo-h">
             <img className="p5" src={logo} alt="" width="auto" />
@@ -153,7 +153,7 @@ export default function Sidebar(props) {
             onClick={() => {
               setOpen(!open);
             }}
-            className={open ? "bg-secondary color-white" : ""}
+            className={!open ? "bg-secondary color-white" : ""}
           >
             <ListItemIcon>
               <IconBarChart />
@@ -189,7 +189,7 @@ export default function Sidebar(props) {
           </ListItem>
         </Link>
       </List>
-      <Divider />
+      {/* <Divider /> */}
     </Drawer>
   );
 }
