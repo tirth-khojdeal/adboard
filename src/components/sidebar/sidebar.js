@@ -2,24 +2,15 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import logo from "../../assets/logo.svg";
 import mlogo from "../../assets/mlogo.svg";
 import { Paper } from "@material-ui/core";
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
-import Collapse from "@material-ui/core/Collapse";
 
-import IconExpandLess from "@material-ui/icons/ExpandLess";
-import IconExpandMore from "@material-ui/icons/ExpandMore";
-import IconDashboard from "@material-ui/icons/Dashboard";
-import TableChartIcon from "@material-ui/icons/TableChart";
-import TimelineIcon from "@material-ui/icons/Timeline";
 import IconBarChart from "@material-ui/icons/BarChart";
 import AssessmentIcon from "@material-ui/icons/Assessment";
 
@@ -66,13 +57,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Sidebar(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [toggle, setToggle] = useState();
-
-  const handleClick6 = () => {
-    setToggle(6);
-    props.getToggle(toggle);
-  };
-
+  
   return (
     <Drawer
       variant="permanent"
@@ -100,38 +85,13 @@ export default function Sidebar(props) {
         )}
       </Paper>
       <List component="nav" className={classes.appMenu} disablePadding>
-        <Link to="/">
+        <Link to="/analyze">
           <ListItem
             onClick={() => {
               setOpen(!open);
             }}
-            className={open ? "bg-secondary color-white" : ""}
+            className={!open ? "bg-secondary color-white" : ""}
           >
-            <ListItemIcon>
-              <IconDashboard />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" />
-            {open ? <IconExpandLess /> : <IconExpandMore />}
-          </ListItem>
-        </Link>
-
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <Divider />
-          <List component="div" disablePadding>
-            <Link to="/sub1">
-              <ListItem>
-              <FiberManualRecordIcon style={{fontSize:10+"px"}} />
-                <ListItemText inset primary="Sub 1" />
-              </ListItem>
-            </Link>
-        
-          </List>
-        </Collapse>
-
- 
-
-        <Link to="/analyze">
-          <ListItem>
             <ListItemIcon>
               <IconBarChart />
             </ListItemIcon>
@@ -146,10 +106,10 @@ export default function Sidebar(props) {
             </ListItemIcon>
             <ListItemText primary="Automate" />
           </ListItem>
-        </Link>
+        </Link> 
 
       </List>
-      <Divider />
+      {/* <Divider /> */}
     </Drawer>
   );
 }

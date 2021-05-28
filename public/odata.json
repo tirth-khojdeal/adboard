@@ -1,0 +1,42 @@
+{
+"data": [
+{
+"id": "23847763844990436",
+"name": "Nauheed Video",
+"status": "PAUSED",
+"adsets": {
+"data": [
+{
+"id": "23847763845040436"
+}
+],
+"paging": {
+"cursors": {
+"before": "QVFIUmJoeDRlOVR4ZADNpS3hWV2tCV3p4Mkc5SGRrdzQ0M3VZARHZAxZAWVCWEhjQ19ZAamZAZAUlh1Vm51WjRBUFJkc21tNDhMU2tTbkpoNG54YVFOWGg2Si0wSzVB",
+"after": "QVFIUmJoeDRlOVR4ZADNpS3hWV2tCV3p4Mkc5SGRrdzQ0M3VZARHZAxZAWVCWEhjQ19ZAamZAZAUlh1Vm51WjRBUFJkc21tNDhMU2tTbkpoNG54YVFOWGg2Si0wSzVB"
+}
+}
+},
+"insights": {
+"data": [
+{
+"clicks": "607",
+"cpc": "5.646178",
+"spend": "3427.23",
+"ctr": "1.470517",
+"reach": "29142",
+"impressions": "41278",
+"date_start": "2021-04-25",
+"date_stop": "2021-05-24"
+}
+],
+"paging": {
+"cursors": {
+"before": "MAZDZD",
+"after": "MAZDZD"
+}
+}
+}
+}]
+}
+
