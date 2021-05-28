@@ -1,8 +1,9 @@
-import { CssBaseline, Typography } from "@material-ui/core";
+import { Box, CssBaseline, TableCell } from "@material-ui/core";
 import "./style.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Table from "./Table";
+import { withStyles } from "@material-ui/styles";
 
 export default function Demo() {
   const [data, setData] = useState([]);
@@ -19,33 +20,30 @@ export default function Demo() {
     })();
   }, []);
 
+const SubRow=withStyles({
+  root:{
+    width:"100%",
+    display:"flex",
+    justifyContent:"space-evenly",
+    backgroundColor:"white",
+    color:"blue",
+    padding:"20px",
+  }
+})(Box);
+
   const columns = React.useMemo(
     () => [
       {
         id: "expander", // Make sure it has an ID
-        Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
-          <span {...getToggleAllRowsExpandedProps()}>
-            {isAllRowsExpanded ? "👇" : "👉"}
-          </span>
-        ),
-        // Cell: ({ row }) =>
-        //   // Use the row.canExpand and row.getToggleRowExpandedProps prop getter
-        //   row.canExpand ? (
-        //     <span
-        //       {...row.getToggleRowExpandedProps({
-        //         style: {
-        //           paddingLeft: `${row.depth * 2}rem`,
-        //         },
-        //       })}
-        //     >
-        //       {row.isExpanded ? "👇" : "👉"}
-        //     </span>
-        //   ) : null,
-        Cell: ({ row }) => (
-          <span {...row.getToggleRowExpandedProps()}>
-            {row.isExpanded ? "👇" : "👉"}
-          </span>
-        ),
+        // Header: ({ getToggleAllRowsExpandedProps, isAllRowsExpanded }) => (
+        //   <span {...getToggleAllRowsExpandedProps()}>
+        //     {isAllRowsExpanded ? "👇" : "👉"}
+        //   </span>
+        // ),
+        Cell: ({ row }) => 
+            <span {...row.getToggleRowExpandedProps()}>
+              {row.isExpanded ? '👇' : '👉'}
+            </span>
       },
       {
         Header: "NAME",
@@ -64,23 +62,45 @@ export default function Demo() {
   );
 
     const renderRowSubComponent = (row) => {
-      const {
-        // name: { first, last },
-        // location: { city, street, postcode },
-        // picture,
-        status,
-        adsets,
-
-      } = row.original;
+      const data= row.original;
+      let {name,insights,...others} = data;
       return (
         <>
-          <div>Hii In Sub Row{JSON.stringify(row.original)}</div>
-          <Typography color="primary">
-            <h1>
-              Value:{status}/
-              {adsets.data[0].id}
-            </h1>
-          </Typography>
+          {insights ? (
+              <>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].clicks}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].cpc}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].spend}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].ctr}
+                </TableCell>
+                {/* <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].reach}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].impressions}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].data_start}
+                </TableCell>
+                <TableCell style={{ color: "blue" }}>
+                  {insights.data[0].data_stop}
+                </TableCell> */}
+              </>
+          ) : (
+            <TableCell
+              colSpan={8}
+              style={{ color: "blue", textAlign: "center" }}
+            >
+              No Data
+            </TableCell>
+          )}
         </>
       );
     };

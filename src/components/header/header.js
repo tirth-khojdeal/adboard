@@ -17,7 +17,6 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import './style.css';
-import zIndex from "@material-ui/core/styles/zIndex";
 
 const drawerWidth = 200;
 const smalldrawerWidth = 73; 

@@ -8,7 +8,7 @@ import MtCell from "@material-ui/core/TableCell";
 import MtHead from "@material-ui/core/TableHead";
 import MtRow from "@material-ui/core/TableRow";
 import TableContainer from "@material-ui/core/TableContainer";
-import { Container, Typography } from "@material-ui/core";
+import { Button, Container, InputBase, MenuItem, Select, Typography } from "@material-ui/core";
 
 const TrTableContainer = withStyles({
   root: {
@@ -27,6 +27,41 @@ const TrMtRow=withStyles({
     }
 })(MtRow);
 
+const BootstrapInput = withStyles((theme) => ({
+  root: {
+    "label + &": {
+      marginTop: theme.spacing(3),
+    },
+  },
+  input: {
+    borderRadius: 4,
+    position: "relative",
+    backgroundColor: theme.palette.background.paper,
+    border: "1px solid #ced4da",
+    fontSize: 16,
+    padding: "10px 26px 10px 12px",
+    transition: theme.transitions.create(["border-color", "box-shadow"]),
+    // Use the system font instead of the default Roboto font.
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    "&:focus": {
+      borderRadius: 4,
+      borderColor: "#80bdff",
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)",
+    },
+  },
+}))(InputBase);
+
 export default function Table({ columns: userColumns, data, renderRowSubComponent }) {
   const {
     getTableProps, // table props from react-table
@@ -42,13 +77,15 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
     nextPage,
     previousPage,
     setPageSize,
-    visibleColumns,
-    state: { pageIndex, pageSize, expanded },
+    state: { pageIndex, pageSize},
   } = useTable(
     {
       columns: userColumns,
       data,
-      initialState: { pageIndex: 1, expanded: { 3: true } },
+      initialState: { pageIndex: 0,
+        pageSize:5,
+        //  expanded: { 3: true },
+         },
     },
     useSortBy,
     useExpanded,
@@ -90,19 +127,6 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
             // Prepare the row for display
             prepareRow(row);
             return (
-              // <MtRow {...row.getRowProps()}>
-              //   {row.cells.map((cell) => {
-              //     // Apply the cell props
-              //     return (
-              //       <MtCell {...cell.getCellProps()}>
-              //         {
-              //           // Render the cell contents
-              //           cell.render("Cell")
-              //         }
-              //       </MtCell>
-              //     );
-              //   })}
-              // </MtRow>
               <Fragment key={row.getRowProps().key}>
                 <MtRow>
                   {row.cells.map((cell) => {
@@ -114,11 +138,17 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                   })}
                 </MtRow>
                 {row.isExpanded && (
-                  <MtRow>
-                    <MtCell colSpan={visibleColumns.length}>
-                      {renderRowSubComponent(row)}
-                    </MtCell>
-                  </MtRow>
+                  <>
+                    <MtRow style={{backgroundColor:"coral"}}>
+                      
+                        <MtCell>CLICKS</MtCell>
+                        <MtCell>CPC</MtCell>
+                        <MtCell>SPEND</MtCell>
+                        <MtCell>CTR</MtCell>
+                      
+                    </MtRow>
+                    <MtRow>{renderRowSubComponent(row)}</MtRow>
+                  </>
                 )}
               </Fragment>
             );
@@ -127,30 +157,49 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
       </MtTable>
       <Container
         color="primary"
-        style={{ backgroundColor: "#797ef6" }}
         className="pagination"
       >
-        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => gotoPage(0)}
+          disabled={!canPreviousPage}
+        >
           {"<<"}
-        </button>{" "}
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => previousPage()}
+          disabled={!canPreviousPage}
+        >
           {"<"}
-        </button>{" "}
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => nextPage()}
+          disabled={!canNextPage}
+        >
           {">"}
-        </button>{" "}
-        <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => gotoPage(pageCount - 1)}
+          disabled={!canNextPage}
+        >
           {">>"}
-        </button>{" "}
+        </Button>
+
         <Typography color="primary" component="span">
-          Page{" "}
+          Page
           <strong>
             {pageIndex + 1} of {pageOptions.length}
-          </strong>{" "}
+          </strong>
         </Typography>
-        <span>
-          | Go to page:{" "}
-          <input
+
+        <Typography color="primary" component="span">
+          | Go to page:
+          <BootstrapInput
             type="number"
             defaultValue={pageIndex + 1}
             onChange={(e) => {
@@ -159,19 +208,19 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
             }}
             style={{ width: "100px" }}
           />
-        </span>{" "}
-        <select
+        </Typography>
+        <Select
           value={pageSize}
           onChange={(e) => {
             setPageSize(Number(e.target.value));
           }}
         >
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
+          {[5, 10, 25].map((pageSize) => (
+            <MenuItem key={pageSize} value={pageSize}>
               Show {pageSize}
-            </option>
+            </MenuItem>
           ))}
-        </select>
+        </Select>
       </Container>
     </TrTableContainer>
   );
