@@ -1,14 +1,14 @@
-import { Container, Paper, Typography } from "@material-ui/core";
+import { Button, Container, Paper, Typography } from "@material-ui/core";
 import { Route } from "react-router";
 import Demo from "../Section";
 import './style.css';
-
+import Automate from '../automate/automate';
 export default function Content({togglevalue}) {
 
   return (
     <div className="content-root">
       <Container maxWidth="lg">
-        <Paper className="content-welcome-msg" elevation={3}>
+        <Paper >
           <Route exact path="/">
             <Typography component="div" style={{ height: "50vh" }}>
               <h1>Welcome to our Board</h1>
@@ -26,8 +26,8 @@ export default function Content({togglevalue}) {
           <Route exact path="/analyze">
             <Demo />
           </Route>
-          <Route exact path="/charts">
-            <h1>charts</h1>
+          <Route exact path="/automate">
+            <Automate />
           </Route>
           <Route exact path="/reports">
             <h1>reports</h1>
