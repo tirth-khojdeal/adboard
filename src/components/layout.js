@@ -44,10 +44,10 @@ export default function MiniDrawer() {
   };
 
 
-  const [togglevalue, setToggleValue] = useState();
-  const getToggle = (toggle) => {
-    setToggleValue(toggle);
-  };
+  // const [togglevalue, setToggleValue] = useState();
+  // const getToggle = (toggle) => {
+  //   setToggleValue(toggle);
+  // };
 
   return (
     <div className={classes.root}>
@@ -63,10 +63,10 @@ export default function MiniDrawer() {
           <Sidebar
             handleDrawerOpen={handleDrawerOpen}
             handleDrawerClose={handleDrawerClose}
-            getToggle={getToggle}
+            // getToggle={getToggle}
             open={open}
           />
-          <Content togglevalue={togglevalue} />
+          <Content/>
         </Route>
       </BrowserRouter>
     </div>

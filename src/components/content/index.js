@@ -1,9 +1,9 @@
-import { Container, Paper, Typography } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import { Route } from "react-router";
 import Demo from "../Section";
 import './style.css';
 
-export default function Content({togglevalue}) {
+export default function Content() {
 
   return (
       <Paper className="content-root content-welcome-msg" elevation={3}>
@@ -23,18 +23,6 @@ export default function Content({togglevalue}) {
         </Route>
         <Route exact path="/analyze">
           <Demo />
-        </Route>
-        <Route exact path="/charts">
-          <h1>charts</h1>
-        </Route>
-        <Route exact path="/reports">
-          <h1>reports</h1>
-        </Route>
-        <Route exact path="/form">
-          <h1>form</h1>
-        </Route>
-        <Route exact path="/table">
-          <h1>table</h1>
         </Route>
       </Paper>
   );
