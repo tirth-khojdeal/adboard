@@ -1,0 +1,64 @@
+.card-header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: inline-flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  vertical-align: middle;
+}
+.target-text {
+  align-self: center;
+  width: 50%;
+  vertical-align: middle;
+  text-align: left;
+}
+.taget-btn {
+  display: inline-flex;
+  height: 100%;
+  width: 50%;
+  text-align: right;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  position: unset;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.MuiCardContent-root {
+  padding-bottom: 16px !important;
+}
+.white-btn {
+  border: 1px solid #000 !important;
+  border-radius: 5px !important;
+  margin-right: 10px !important;
+}
+.blue-btn {
+  color: #fff !important;
+  border-radius: 5px !important;
+  background: #0e7dff !important;
+}
+.target-automation {
+}
+.target-roas {
+  width: 40%;
+  text-align: left;
+  background: rgb(242, 248, 255);
+  border-radius: 0px 0px 4px 4px;
+  padding: 20px !important;
+}
+.wtfull {
+  width: 100%;
+}
+.target-description {
+  width: 40%;
+  text-align: left;
+  margin-top: 20px;
+}
+.description {
+  width: 100%;
+}
