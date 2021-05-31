@@ -1,12 +1,13 @@
-import { Box, CssBaseline, TableCell } from "@material-ui/core";
+import { Button, CssBaseline, TableCell } from "@material-ui/core";
 import "./style.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Table from "./Table";
-import { withStyles } from "@material-ui/styles";
 
 export default function Demo() {
   const [data, setData] = useState([]);
+  const [adset,setAdset]=useState([]);
+
   useEffect(() => {
     (async () => {
       const result = await axios("data.json", {
@@ -20,16 +21,29 @@ export default function Demo() {
     })();
   }, []);
 
-const SubRow=withStyles({
-  root:{
-    width:"100%",
-    display:"flex",
-    justifyContent:"space-evenly",
-    backgroundColor:"white",
-    color:"blue",
-    padding:"20px",
-  }
-})(Box);
+    useEffect(() => {
+      (async () => {
+        const res = await axios("adsets.json", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
+        setAdset(res.data.data);
+        // console.log(res.data.data[0].name);
+      })();
+    }, []);
+
+// const SubRow=withStyles({
+//   root:{
+//     width:"100%",
+//     display:"flex",
+//     justifyContent:"space-evenly",
+//     backgroundColor:"white",
+//     color:"blue",
+//     padding:"20px",
+//   }
+// })(Box);
 
   const columns = React.useMemo(
     () => [
@@ -40,11 +54,11 @@ const SubRow=withStyles({
         //     {isAllRowsExpanded ? "👇" : "👉"}
         //   </span>
         // ),
-        Cell: ({ row }) => 
+        Cell: ({ row }) => (
           <span {...row.getToggleRowExpandedProps()}>
             {row.isExpanded ? "👇" : "👉"}
           </span>
-        
+        ),
       },
       {
         Header: "NAME",
@@ -53,6 +67,13 @@ const SubRow=withStyles({
       {
         Header: "STATUS",
         accessor: "status",
+        maxWidth: 70,
+        minWidth: 70,
+        Cell: ({ row: { original } }) => (
+          <Button variant="contained" onClick={() => console.log(original)}>
+            {original.status}
+          </Button>
+        ),
       },
       {
         Header: "ClICKS",

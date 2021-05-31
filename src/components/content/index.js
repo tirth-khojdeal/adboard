@@ -1,4 +1,4 @@
-import { Button, Container, Paper, Typography } from "@material-ui/core";
+import { Container, Paper, Typography } from "@material-ui/core";
 import { Route } from "react-router";
 import Demo from "../Section";
 import './style.css';

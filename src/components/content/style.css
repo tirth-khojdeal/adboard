@@ -1,11 +1,12 @@
+
+header {
+  box-shadow: 0px !important;
+  border-bottom: 1px solid #ccc !important;
+}
 .content-root {
   margin-top: 67px;
   width: 100%;
   padding: 10px;
-}
-header {
-  box-shadow: 0px !important;
-  border-bottom: 1px solid #ccc !important;
 }
 @media only screen and (max-width: 600px) {
   .content-root {

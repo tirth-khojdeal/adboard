@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "id": "23847606670160436",
+      "name": "Sunscreen Media",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847603406960436",
+      "name": "Sunscreen Media Lookalike",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847457843610436",
+      "name": "VLCC Facial Kit",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847420987890436",
+      "name": "VLCC Sunscreens",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847671650440436",
+      "name": "48 hours Left Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847416203830436",
+      "name": "VLCC Sunscreens",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847416013370436",
+      "name": "Charcoal Range - Video",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847457811890436",
+      "name": "VLCC Facial Kit",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847491778500436",
+      "name": "Haldi Chandan Facewash",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847650604680436",
+      "name": "Offer Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847599756770436",
+      "name": "Charcoal Video",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847451078390436",
+      "name": "Facial kit",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847709192960436",
+      "name": "24 hours Left Post",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847416013540436",
+      "name": "Walnut Coconut Scrub",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847416013450436",
+      "name": "Haldi Chandan Face Wash",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847416013510436",
+      "name": "Coffee Peel Off Mask",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847416013430436",
+      "name": "Multiple Product Carousel",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847416013420436",
+      "name": "Ubtan",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847763443840436",
+      "name": "Multi Product Carousel – Copy 2",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847678214010436",
+      "name": "VLCC Facial Kit",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847643408690436",
+      "name": "VLCC Sunscreens",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847686657490436",
+      "name": "24 Hours Left",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847671445070436",
+      "name": "48 hours Left Post",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847637672050436",
+      "name": "SPF 50 Sunscreen",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847651001750436",
+      "name": "Offer Post",
+      "status": "ACTIVE"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "QVFIUjFlVFp4QmxodWZASc0tSaHp3YThfejVUeGFlcHRiSnBrTk5aRFNlY0tfMzByY2VxekZAjMmpDd2ZAhSGI4WGVTV0FBQ3B5WnhjTFQ2OVFXdm02X2duT1JB",
+      "after": "QVFIUjRyWi1pT1QwdWZA1VzlSVmxlZA0NxTkhBQnBzelVSTF9WeHRyS2J1WjdQRFRsRHdZAalN3N01tbFc5dUUyWTI3MXU1LUd3NjN0ckFuSkxmXzdONGhDbzhn"
+    },
+    "next": "https://graph.facebook.com/v10.0/act_311236996426897/ads?access_token=EAAB5hYFo0J8BAOCruQZCOclJLLAr0rkaTNSQOH9FiOkPzXrApqo6JZA8dyRhYC4AITF1BBClZCgZAJ4QBCD0BZAdI9ege2WxyvxmvXngFFieQsLD8H9Tx7nFPhWk3yGqzjbxVHKU9KzR0c0eD6tVBdRZAXsjbTvpZAM5l5yCbEpbqnIPHCNfHEr&fields=id%2Cname%2Cstatus&limit=25&after=QVFIUjRyWi1pT1QwdWZA1VzlSVmxlZA0NxTkhBQnBzelVSTF9WeHRyS2J1WjdQRFRsRHdZAalN3N01tbFc5dUUyWTI3MXU1LUd3NjN0ckFuSkxmXzdONGhDbzhn"
+  }
+}
