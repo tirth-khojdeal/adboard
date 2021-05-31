@@ -45,7 +45,7 @@
 .target-automation {
 }
 .target-roas {
-  width: 40%;
+  width: 100%;
   text-align: left;
   background: rgb(242, 248, 255);
   border-radius: 0px 0px 4px 4px;
@@ -55,10 +55,27 @@
   width: 100%;
 }
 .target-description {
-  width: 40%;
+  width: 100%;
   text-align: left;
   margin-top: 20px;
 }
 .description {
   width: 100%;
+}
+.left-pos {
+  width: 40%;
+  float: left;
+}
+.right-pos {
+  width: 60%;
+  float: left;
+}
+.block-d {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 20px 10px 10px 0px;
+}
+.bg-white {
+  background: #fff;
+  padding: 20px;
 }
