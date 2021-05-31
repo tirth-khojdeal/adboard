@@ -41,9 +41,10 @@ const SubRow=withStyles({
         //   </span>
         // ),
         Cell: ({ row }) => 
-            <span {...row.getToggleRowExpandedProps()}>
-              {row.isExpanded ? '👇' : '👉'}
-            </span>
+          <span {...row.getToggleRowExpandedProps()}>
+            {row.isExpanded ? "👇" : "👉"}
+          </span>
+        
       },
       {
         Header: "NAME",
@@ -54,20 +55,49 @@ const SubRow=withStyles({
         accessor: "status",
       },
       {
-        Header: "INSIGHTS",
+        Header: "ClICKS",
         accessor: "insights.data[0].clicks",
+      },
+      {
+        Header: "CPC",
+        accessor: "insights.data[0].cpc",
+      },
+      {
+        Header: "SPEND",
+        accessor: "insights.data[0].spend",
+      },
+      {
+        Header: "CTR",
+        accessor: "insights.data[0].ctr",
+      },
+      {
+        Header: "REACH",
+        accessor: "insights.data[0].reach",
+      },
+      {
+        Header: "IMPRESSIONS",
+        accessor: "insights.data[0].impressions",
+      },
+      {
+        Header: "DATE_START",
+        accessor: "insights.data[0].date_start",
+      },
+      {
+        Header: "DATE_STOP",
+        accessor: "insights.data[0].date_stop",
       },
     ],
     []
   );
 
-    const renderRowSubComponent = (row) => {
+    const renderRowSubComponent =(row)=> {
       const data= row.original;
       let {name,insights,...others} = data;
       return (
         <>
           {insights ? (
               <>
+              <TableCell colSpan={3}></TableCell>
                 <TableCell style={{ color: "blue" }}>
                   {insights.data[0].clicks}
                 </TableCell>
@@ -80,18 +110,18 @@ const SubRow=withStyles({
                 <TableCell style={{ color: "blue" }}>
                   {insights.data[0].ctr}
                 </TableCell>
-                {/* <TableCell style={{ color: "blue" }}>
+                <TableCell style={{ color: "blue" }}>
                   {insights.data[0].reach}
                 </TableCell>
                 <TableCell style={{ color: "blue" }}>
                   {insights.data[0].impressions}
                 </TableCell>
                 <TableCell style={{ color: "blue" }}>
-                  {insights.data[0].data_start}
+                  {insights.data[0].date_start}
                 </TableCell>
                 <TableCell style={{ color: "blue" }}>
-                  {insights.data[0].data_stop}
-                </TableCell> */}
+                  {insights.data[0].date_stop}
+                </TableCell>
               </>
           ) : (
             <TableCell
