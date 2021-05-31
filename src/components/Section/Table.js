@@ -77,15 +77,17 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex, pageSize},
+    visibleColumns,
+    state: { pageIndex, pageSize },
   } = useTable(
     {
       columns: userColumns,
       data,
-      initialState: { pageIndex: 0,
-        pageSize:5,
+      initialState: {
+        pageIndex: 0,
+        pageSize: 5,
         //  expanded: { 3: true },
-         },
+      },
     },
     useSortBy,
     useExpanded,
@@ -124,30 +126,35 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
 
         <MtBody {...getTableBodyProps()}>
           {page.map((row, i) => {
-            // Prepare the row for display
             prepareRow(row);
             return (
               <Fragment key={row.getRowProps().key}>
-                <MtRow>
+                <MtRow {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <MtCell {...cell.getCellProps()}>
                         {cell.render("Cell")}
+                        {/* {JSON.stringify(row)} */}
                       </MtCell>
                     );
                   })}
                 </MtRow>
                 {row.isExpanded && (
                   <>
-                    <MtRow style={{backgroundColor:"coral"}}>
-                      
-                        <MtCell>CLICKS</MtCell>
-                        <MtCell>CPC</MtCell>
-                        <MtCell>SPEND</MtCell>
-                        <MtCell>CTR</MtCell>
-                      
+                    <MtRow style={{ backgroundColor: "coral" }}>
+                      <MtCell colSpan={3}></MtCell>
+                      <MtCell>CLICKS</MtCell>
+                      <MtCell>CPC</MtCell>
+                      <MtCell>SPEND</MtCell>
+                      <MtCell>CTR</MtCell>
+                      <MtCell>REACH</MtCell>
+                      <MtCell>IMPRESSIONS</MtCell>
+                      <MtCell>DATE_START</MtCell>
+                      <MtCell>DATE_STOP</MtCell>
                     </MtRow>
-                    <MtRow>{renderRowSubComponent(row)}</MtRow>
+                    <MtRow colSpan={visibleColumns.length}>
+                      {renderRowSubComponent(row)}
+                    </MtRow>
                   </>
                 )}
               </Fragment>

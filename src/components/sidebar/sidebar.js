@@ -109,7 +109,6 @@ export default function Sidebar(props) {
         </Link> 
 
       </List>
-      {/* <Divider /> */}
     </Drawer>
   );
 }
