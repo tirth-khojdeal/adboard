@@ -7,8 +7,6 @@ import BorderAllIcon from '@material-ui/icons/BorderAll';
 
 export default function Demo() {
   const [data, setData] = useState([]);
-  const [adset, setAdset] = useState([]);
-
 
   useEffect(() => {
     (async () => {
@@ -23,18 +21,7 @@ export default function Demo() {
     })();
   }, []);
 
-  useEffect(() => {
-    (async () => {
-      const res = await axios("adsets.json", {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-      setAdset(res.data.data);
-      // console.log(res.data.data[0].name);
-    })();
-  }, []);
+
 
 
   function SubRows({ row, rowProps, data, loading }) {
@@ -50,10 +37,6 @@ export default function Demo() {
     }
     return (
       <>
-        return (
-          {/* <div>
-            {JSON.stringify(data)}
-          </div> */}
         <TableRow key={row.index}>
           <TableCell />
           <TableCell>
@@ -67,7 +50,6 @@ export default function Demo() {
           </TableCell>
           <TableCell>{data[row.index].status}</TableCell>
         </TableRow>
-        );
       </>
     );
   }
@@ -75,16 +57,26 @@ export default function Demo() {
   function SubRowAsync({ row, rowProps, visibleColumns }) {
     const [loading, setLoading] = React.useState(true);
     const [data, setData] = React.useState();
-    React.useEffect(() => {
-      const timer = setTimeout(() => {
-        setData(adset);
-        setLoading(false);
-      }, 500);
 
-      return () => {
-        clearTimeout(timer);
-      };
-    }, []);
+      useEffect(() => {
+        (async () => {
+          const res = await axios("adsets.json", {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          });
+              const timer = setTimeout(() => {
+                setData(res.data.data);
+                setLoading(false);
+              }, 500);
+
+              return () => {
+                clearTimeout(timer);
+              };
+        })();
+      }, []);
+
 
     return (
       <SubRows
