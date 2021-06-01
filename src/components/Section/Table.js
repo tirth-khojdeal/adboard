@@ -177,6 +177,7 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
         <MtBody {...getTableBodyProps()}>
           {page.map((row, i) => {
             prepareRow(row);
+            const rowProps = row.getRowProps();
             return (
               <Fragment key={row.getRowProps().key}>
                 <MtRow {...row.getRowProps()}>
@@ -191,7 +192,7 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                 </MtRow>
                 {row.isExpanded && (
                   <>
-                    <MtRow style={{ backgroundColor: "coral" }}>
+                    {/* <MtRow style={{ backgroundColor: "coral" }}>
                       <MtCell colSpan={3}></MtCell>
                       <MtCell>CLICKS</MtCell>
                       <MtCell>CPC</MtCell>
@@ -201,10 +202,10 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                       <MtCell>IMPRESSIONS</MtCell>
                       <MtCell>DATE_START</MtCell>
                       <MtCell>DATE_STOP</MtCell>
-                    </MtRow>
-                    <MtRow colSpan={visibleColumns.length}>
-                      {renderRowSubComponent(row)}
-                    </MtRow>
+                    </MtRow> */}
+                    {/* <MtRow colSpan={visibleColumns.length}> */}
+                      {renderRowSubComponent({ row, rowProps, visibleColumns })}
+                    {/* </MtRow> */}
                   </>
                 )}
               </Fragment>
