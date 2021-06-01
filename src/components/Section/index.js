@@ -165,34 +165,6 @@ export default function Demo() {
         accessor: "insights.data[0].date_stop",
         SubCell: () => null,
       },
-      {
-        Header: "CPC",
-        accessor: "insights.data[0].cpc",
-      },
-      {
-        Header: "SPEND",
-        accessor: "insights.data[0].spend",
-      },
-      {
-        Header: "CTR",
-        accessor: "insights.data[0].ctr",
-      },
-      {
-        Header: "REACH",
-        accessor: "insights.data[0].reach",
-      },
-      {
-        Header: "IMPRESSIONS",
-        accessor: "insights.data[0].impressions",
-      },
-      {
-        Header: "DATE_START",
-        accessor: "insights.data[0].date_start",
-      },
-      {
-        Header: "DATE_STOP",
-        accessor: "insights.data[0].date_stop",
-      },
     ],
     []
   );
