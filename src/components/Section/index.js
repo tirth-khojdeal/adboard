@@ -1,9 +1,15 @@
-import { Button, CssBaseline, TableCell, TableRow} from "@material-ui/core";
+import { Box, Button, Container, CssBaseline, Grid, TableCell, TableRow, TextField, Typography} from "@material-ui/core";
 import "./style.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Table from "./Table";
 import BorderAllIcon from '@material-ui/icons/BorderAll';
+import DateFnsUtils from "@date-io/date-fns";
+import { DateRangePicker } from "react-date-range";
+import { addDays } from "date-fns";
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+
 
 export default function Demo() {
   const [data, setData] = useState([]);
@@ -169,49 +175,6 @@ export default function Demo() {
     []
   );
 
-  // const renderRowSubComponent = (row) => {
-  //   const data = row.original;
-  //   let { name, insights, ...others } = data;
-  //   return (
-  //     <>
-  //       {insights ? (
-  //         <>
-  //           <TableCell colSpan={3}></TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].clicks}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].cpc}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].spend}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].ctr}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].reach}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].impressions}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].date_start}
-  //           </TableCell>
-  //           <TableCell style={{ color: "blue" }}>
-  //             {insights.data[0].date_stop}
-  //           </TableCell>
-  //         </>
-  //       ) : (
-  //         <TableCell colSpan={8} style={{ color: "blue", textAlign: "center" }}>
-  //           No Data
-  //         </TableCell>
-  //       )}
-  //     </>
-  //   );
-  // };
-
-  // Create a function that will render our row sub components
   const renderRowSubComponent = React.useCallback(
     ({ row, rowProps, visibleColumns }) => (
       <SubRowAsync
@@ -223,8 +186,50 @@ export default function Demo() {
     []
   );
 
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
   return (
     <div className="App">
+      <div style={{ width: "100%" }}>
+        <Box
+          display="flex"
+          flexDirection="row-reverse"
+          p={1}
+          m={1}
+          bgcolor="background.paper"
+        >
+          <DateRangePicker
+            onChange={(item) => setState([item.selection])}
+            showSelectionPreview={true}
+            showPreview={false}
+            moveRangeOnFirstSelection={false}
+            months={2}
+            ranges={state}
+            direction="horizontal"
+          />
+          
+        </Box>
+        <Box
+          display="flex"
+          flexDirection="row"
+          p={2}
+          m={1}
+          bgcolor="background.paper"
+        >
+          <Typography
+            style={{ fontWeight: "700px", fontSize: "2rem", color: "coral" }}
+            component="h1"
+          >
+            Analyze
+          </Typography>
+        </Box>
+      </div>
       <CssBaseline />
       <Table
         columns={columns}
