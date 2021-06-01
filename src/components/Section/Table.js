@@ -1,5 +1,11 @@
 import React, { Fragment } from "react";
-import { usePagination, useSortBy, useTable, useExpanded } from "react-table";
+import {
+  usePagination,
+  useSortBy,
+  useTable,
+  useExpanded,
+  useRowSelect,
+} from "react-table";
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
 import MtTable from "@material-ui/core/Table";
@@ -62,6 +68,23 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
+const IndeterminateCheckbox = React.forwardRef(
+  ({ indeterminate, ...rest }, ref) => {
+    const defaultRef = React.useRef();
+    const resolvedRef = ref || defaultRef;
+
+    React.useEffect(() => {
+      resolvedRef.current.indeterminate = indeterminate;
+    }, [resolvedRef, indeterminate]);
+
+    return (
+      <>
+        <input type="checkbox" ref={resolvedRef} {...rest} />
+      </>
+    );
+  }
+);
+
 export default function Table({ columns: userColumns, data, renderRowSubComponent }) {
   const {
     getTableProps, // table props from react-table
@@ -78,7 +101,11 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
     previousPage,
     setPageSize,
     visibleColumns,
-    state: { pageIndex, pageSize },
+    // selectedFlatRows,
+    state: { pageIndex, 
+      pageSize,
+      //  selectedRowIds
+     },
   } = useTable(
     {
       columns: userColumns,
@@ -86,12 +113,35 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
       initialState: {
         pageIndex: 0,
         pageSize: 5,
-        //  expanded: { 3: true },
       },
     },
     useSortBy,
     useExpanded,
-    usePagination
+    usePagination,
+    useRowSelect,
+    (hooks) => {
+      hooks.visibleColumns.push((columns) => [
+        // Let's make a column for selection
+        {
+          id: "selection",
+          // The header can use the table's getToggleAllRowsSelectedProps method
+          // to render a checkbox
+          Header: ({ getToggleAllRowsSelectedProps }) => (
+            <div>
+              <IndeterminateCheckbox {...getToggleAllRowsSelectedProps()} />
+            </div>
+          ),
+          // The cell can use the individual row's getToggleRowSelectedProps method
+          // to the render a checkbox
+          Cell: ({ row }) => (
+            <div>
+              <IndeterminateCheckbox {...row.getToggleRowSelectedProps()} />
+            </div>
+          ),
+        },
+        ...columns,
+      ]);
+    }
   );
   return (
     <TrTableContainer component={Paper}>
@@ -127,6 +177,7 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
         <MtBody {...getTableBodyProps()}>
           {page.map((row, i) => {
             prepareRow(row);
+            const rowProps = row.getRowProps();
             return (
               <Fragment key={row.getRowProps().key}>
                 <MtRow {...row.getRowProps()}>
@@ -141,7 +192,7 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                 </MtRow>
                 {row.isExpanded && (
                   <>
-                    <MtRow style={{ backgroundColor: "coral" }}>
+                    {/* <MtRow style={{ backgroundColor: "coral" }}>
                       <MtCell colSpan={3}></MtCell>
                       <MtCell>CLICKS</MtCell>
                       <MtCell>CPC</MtCell>
@@ -151,10 +202,10 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                       <MtCell>IMPRESSIONS</MtCell>
                       <MtCell>DATE_START</MtCell>
                       <MtCell>DATE_STOP</MtCell>
-                    </MtRow>
-                    <MtRow colSpan={visibleColumns.length}>
-                      {renderRowSubComponent(row)}
-                    </MtRow>
+                    </MtRow> */}
+                    {/* <MtRow colSpan={visibleColumns.length}> */}
+                      {renderRowSubComponent({ row, rowProps, visibleColumns })}
+                    {/* </MtRow> */}
                   </>
                 )}
               </Fragment>
@@ -162,10 +213,21 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
           })}
         </MtBody>
       </MtTable>
-      <Container
-        color="primary"
-        className="pagination"
-      >
+      {/* <pre>
+        <code>
+          {JSON.stringify(
+            {
+              selectedRowIds: selectedRowIds,
+              "selectedFlatRows[].original": selectedFlatRows.map(
+                (d) => d.original
+              ),
+            },
+            null,
+            2
+          )}
+        </code>
+      </pre> */}
+      <Container color="primary" className="pagination">
         <Button
           variant="contained"
           color="primary"

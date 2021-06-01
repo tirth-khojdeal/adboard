@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "id": "23847763845040436",
+      "name": "Nauheed AD",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847723649020436",
+      "name": "Retarget - Viewed or ATC - Lookalike",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847692776740436",
+      "name": "Facial Kit Awareness",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847691662240436",
+      "name": "Email Jan-March",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847665107550436",
+      "name": "Facebook Boost Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847665069870436",
+      "name": "Insta Boost Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847629810300436",
+      "name": "Catalouge_interacted_website",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847614803900436",
+      "name": "Phone number conversion list",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847603064520436",
+      "name": "Lookalike Email List",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847602949810436",
+      "name": "Email List",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847599200990436",
+      "name": "Interest",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847525922190436",
+      "name": "Facebook Post Engagement 13 March",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847492344300436",
+      "name": "Facebook Boost Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847492270600436",
+      "name": "Insta Boost Post",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847421335040436",
+      "name": "Interest",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847416013610436",
+      "name": "ATC - 10 Days",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847415982690436",
+      "name": "Look-a-like Custom Purchase - 180 Days",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847415952170436",
+      "name": "Custom - FB + Insta Page",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847415934090436",
+      "name": "Interest",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847415905430436",
+      "name": "Website Visitors - 30 Days",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847404972860436",
+      "name": "Look-a-like - Custom Social Page",
+      "status": "PAUSED"
+    },
+    {
+      "id": "23847404515600436",
+      "name": "Look-a-like VLCC Social Page",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847404468500436",
+      "name": "Look-a-like Custom Purchase - 180 Days- 23Feb",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847398627040436",
+      "name": "New ad set",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "23847383075620436",
+      "name": "Website Visitors - 30 Days",
+      "status": "ACTIVE"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "QVFIUmJoeDRlOVR4ZADNpS3hWV2tCV3p4Mkc5SGRrdzQ0M3VZARHZAxZAWVCWEhjQ19ZAamZAZAUlh1Vm51WjRBUFJkc21tNDhMU2tTbkpoNG54YVFOWGg2Si0wSzVB",
+      "after": "QVFIUlBaMlJQX0dheHBZARkY1YmNfcy1EbjhONUtoOUZAmd3JBM0ItRzJGcUVCZAjlqOE16SC1fWWZAuSFBHVDhUVFVyUHlEUEpsa1B2djJ6YVNLRDZAmUlFhVEd3"
+    },
+    "next": "https://graph.facebook.com/v10.0/act_311236996426897/adsets?access_token=EAAB5hYFo0J8BAOCruQZCOclJLLAr0rkaTNSQOH9FiOkPzXrApqo6JZA8dyRhYC4AITF1BBClZCgZAJ4QBCD0BZAdI9ege2WxyvxmvXngFFieQsLD8H9Tx7nFPhWk3yGqzjbxVHKU9KzR0c0eD6tVBdRZAXsjbTvpZAM5l5yCbEpbqnIPHCNfHEr&fields=id%2Cname%2Cstatus&limit=25&after=QVFIUlBaMlJQX0dheHBZARkY1YmNfcy1EbjhONUtoOUZAmd3JBM0ItRzJGcUVCZAjlqOE16SC1fWWZAuSFBHVDhUVFVyUHlEUEpsa1B2djJ6YVNLRDZAmUlFhVEd3"
+  }
+}
