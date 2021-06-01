@@ -51,6 +51,9 @@ export default function Demo() {
     return (
       <>
         return (
+          {/* <div>
+            {JSON.stringify(data)}
+          </div> */}
         <TableRow key={row.index}>
           <TableCell />
           <TableCell>
@@ -71,7 +74,7 @@ export default function Demo() {
 
   function SubRowAsync({ row, rowProps, visibleColumns }) {
     const [loading, setLoading] = React.useState(true);
-    const [data, setData] = React.useState([]);
+    const [data, setData] = React.useState();
     React.useEffect(() => {
       const timer = setTimeout(() => {
         setData(adset);
