@@ -14,7 +14,9 @@ import MtCell from "@material-ui/core/TableCell";
 import MtHead from "@material-ui/core/TableHead";
 import MtRow from "@material-ui/core/TableRow";
 import TableContainer from "@material-ui/core/TableContainer";
-import { Button, Container, InputBase, MenuItem, Select, Typography } from "@material-ui/core";
+import Popover from "@material-ui/core/Popover";
+
+import { Box, Button, Checkbox, Container, FormControlLabel, FormGroup, Grid, InputBase, List, ListItem, ListItemIcon, ListItemText, MenuItem, Select, Typography } from "@material-ui/core";
 
 const TrTableContainer = withStyles({
   root: {
@@ -96,6 +98,8 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
     canNextPage,
     pageOptions,
     pageCount,
+    allColumns,
+    getToggleHideAllColumnsProps,
     gotoPage,
     nextPage,
     previousPage,
@@ -143,56 +147,115 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
       ]);
     }
   );
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <TrTableContainer component={Paper}>
-      <MtTable {...getTableProps()}>
-        <MtHead>
-          {headerGroups.map((headerGroup) => (
-            <TrMtRow {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <MtCell
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? "sort-desc"
-                        : "sort-asc"
-                      : ""
-                  }
-                >
-                  {column.render("Header")}
-                  <span>
-                    {column.isSorted
-                      ? column.isSortedDesc
-                        ? " 🔽"
-                        : " 🔼"
-                      : ""}
-                  </span>
-                </MtCell>
+      <Box display="flex" flexDirection="row-reverse" p={1}>
+        <Button
+          aria-describedby={id}
+          variant="contained"
+          color="primary"
+          onClick={handleClick}
+        >
+          Columns
+        </Button>
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          <Grid item xs={12} md={6}>
+            <List>
+              <ListItem>
+                <Typography color="primary">
+                  <IndeterminateCheckbox {...getToggleHideAllColumnsProps()} />{" "}
+                  Toggle All
+                </Typography>
+              </ListItem>
+              {allColumns.map((column) => (
+                <Typography color="primary" key={column.id}>
+                  <ListItem>
+                    <input type="checkbox" {...column.getToggleHiddenProps()} />
+                    {column.id}
+                  </ListItem>
+                </Typography>
               ))}
-            </TrMtRow>
-          ))}
-        </MtHead>
+            </List>
+          </Grid>
+        </Popover>
+      </Box>
 
-        <MtBody {...getTableBodyProps()}>
-          {page.map((row, i) => {
-            prepareRow(row);
-            const rowProps = row.getRowProps();
-            return (
-              <Fragment key={row.getRowProps().key}>
-                <MtRow {...row.getRowProps()}>
-                  {row.cells.map((cell) => {
-                    return (
-                      <MtCell {...cell.getCellProps()}>
-                        {cell.render("Cell")}
-                        {/* {JSON.stringify(row)} */}
-                      </MtCell>
-                    );
-                  })}
-                </MtRow>
-                {row.isExpanded && (
-                  <>
-                    {/* <MtRow style={{ backgroundColor: "coral" }}>
+      <Box display="flex" flexDirection="row-reverse" style={{overflowX:"auto"}} p={1}>
+        <MtTable {...getTableProps()}>
+          <MtHead>
+            {headerGroups.map((headerGroup) => (
+              <TrMtRow {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map((column) => (
+                  <MtCell
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    className={
+                      column.isSorted
+                        ? column.isSortedDesc
+                          ? "sort-desc"
+                          : "sort-asc"
+                        : ""
+                    }
+                  >
+                    {column.render("Header")}
+                    <span>
+                      {column.isSorted
+                        ? column.isSortedDesc
+                          ? " 🔽"
+                          : " 🔼"
+                        : ""}
+                    </span>
+                  </MtCell>
+                ))}
+              </TrMtRow>
+            ))}
+          </MtHead>
+
+          <MtBody {...getTableBodyProps()}>
+            {page.map((row, i) => {
+              prepareRow(row);
+              const rowProps = row.getRowProps();
+              return (
+                <Fragment key={row.getRowProps().key}>
+                  <MtRow {...row.getRowProps()}>
+                    {row.cells.map((cell) => {
+                      return (
+                        <MtCell {...cell.getCellProps()}>
+                          {cell.render("Cell")}
+                          {/* {JSON.stringify(row)} */}
+                        </MtCell>
+                      );
+                    })}
+                  </MtRow>
+                  {row.isExpanded && (
+                    <>
+                      {/* <MtRow style={{ backgroundColor: "coral" }}>
                       <MtCell colSpan={3}></MtCell>
                       <MtCell>CLICKS</MtCell>
                       <MtCell>CPC</MtCell>
@@ -203,17 +266,17 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
                       <MtCell>DATE_START</MtCell>
                       <MtCell>DATE_STOP</MtCell>
                     </MtRow> */}
-                    {/* <MtRow colSpan={visibleColumns.length}> */}
+                      {/* <MtRow colSpan={visibleColumns.length}> */}
                       {renderRowSubComponent({ row, rowProps, visibleColumns })}
-                    {/* </MtRow> */}
-                  </>
-                )}
-              </Fragment>
-            );
-          })}
-        </MtBody>
-      </MtTable>
-      {/* <pre>
+                      {/* </MtRow> */}
+                    </>
+                  )}
+                </Fragment>
+              );
+            })}
+          </MtBody>
+        </MtTable>
+        {/* <pre>
         <code>
           {JSON.stringify(
             {
@@ -227,6 +290,7 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
           )}
         </code>
       </pre> */}
+      </Box>
       <Container color="primary" className="pagination">
         <Button
           variant="contained"

@@ -4,7 +4,6 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Table from "./Table";
 import BorderAllIcon from '@material-ui/icons/BorderAll';
-import DateFnsUtils from "@date-io/date-fns";
 import { DateRangePicker } from "react-date-range";
 import { addDays } from "date-fns";
 import 'react-date-range/dist/styles.css'; // main css file
@@ -186,13 +185,15 @@ export default function Demo() {
     []
   );
 
-  const [state, setState] = useState([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
-      key: "selection",
-    },
-  ]);
+  // const [state, setState] = useState([
+  //   {
+  //     startDate: new Date(),
+  //     endDate: addDays(new Date(), 7),
+  //     key: "selection",
+  //   },
+  // ]);
+  // const [popup,setPopup]=useState(true);
+  const [state, setState] = useState("2021 - 06 - 24");
 
   return (
     <div className="App">
@@ -204,16 +205,20 @@ export default function Demo() {
           m={1}
           bgcolor="background.paper"
         >
-          <DateRangePicker
-            onChange={(item) => setState([item.selection])}
-            showSelectionPreview={true}
-            showPreview={false}
-            moveRangeOnFirstSelection={false}
-            months={2}
-            ranges={state}
-            direction="horizontal"
-          />
-          
+          <input type="date" value={state} onChange={(e)=>setState(e.target.value)}/>
+          <input type="date"/>
+
+          {/* <div className="">
+            <DateRangePicker
+              onChange={(item) => setState([item.selection])}
+              showSelectionPreview={true}
+              showPreview={false}
+              moveRangeOnFirstSelection={false}
+              months={2}
+              ranges={state}
+              direction="horizontal"
+            />
+          </div> */}
         </Box>
         <Box
           display="flex"
