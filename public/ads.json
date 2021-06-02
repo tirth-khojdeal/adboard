@@ -3,127 +3,716 @@
     {
       "id": "23847606670160436",
       "name": "Sunscreen Media",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847606673100436",
+        "video_id": "1632421386947629",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "1632031266986641",
+            "title": "VLCC Sunscreen",
+            "message": "This light-weight gel formula is a skincare essential for summers. \n\n- Protects your skin from UVA & UVB rays\n- Boosts radiance & prevents tanning \n- Non-greasy formula\n\nGet FLAT 30% off + Extra 5% off on pre-paid orders.\nUSE CODE: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html??utm_source=CustomerLookalike&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQLo0p6G8gCoxQduf8hR6XZh9sZySmIY39LzJ7Jzeblp3cWZY_IZ7IfB8AGAMJsX2W5GVGouZm28_Ek31QU8rrKDTMSe7OWkxO9bjONk2k8-Fz9ZLyh1p-7CdfZWwqm899Tp3G6sZMntGp75-0Ez1hAi",
+            "image_hash": "ef4cebc41e60138e5495094146bf16e7"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFWVA3SGvCY6YiL&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F163083465_1632421406947627_3317764536824074089_n.jpg%3Fccb%3D1-3%26_nc_ohc%3Dp13g8M0m6S8AX-izRro%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D6f8687d805efca4bad2fa25cb26af066%26oe%3D60BCE8A3&cfs=1&ccb=3-5&_nc_hash=AQEi-VemViUiGP3y",
+        "effective_object_story_id": "1209491565742516_5578407745517521"
+      }
     },
     {
       "id": "23847603406960436",
       "name": "Sunscreen Media Lookalike",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847606415930436",
+        "video_id": "1632385603617874",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "1632031266986641",
+            "title": "VLCC Sunscreen",
+            "message": "This light-weight gel formula is a skincare essential for summers. \n\n- Protects your skin from UVA & UVB rays\n- Boosts radiance & prevents tanning \n- Non-greasy formula\n\nGet FLAT 30% off + Extra 5% off on pre-paid orders.\nUSE CODE: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html??utm_source=CustomerLookalike&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQLo0p6G8gCoxQduf8hR6XZh9sZySmIY39LzJ7Jzeblp3cWZY_IZ7IfB8AGAMJsX2W5GVGouZm28_Ek31QU8rrKDTMSe7OWkxO9bjONk2k8-Fz9ZLyh1p-7CdfZWwqm899Tp3G6sZMntGp75-0Ez1hAi",
+            "image_hash": "ef4cebc41e60138e5495094146bf16e7"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQGQ7H1vCWAM7uiN&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F160954171_1632385633617871_7186576903378222800_n.jpg%3Fccb%3D1-3%26_nc_ohc%3D2nwzxfiZJCEAX_gOf2b%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D4f461003021caa9ba0138469e21c8407%26oe%3D60BB7808&cfs=1&ccb=3-5&_nc_hash=AQFsgQP4xLl9O_3Q",
+        "effective_object_story_id": "1209491565742516_5578243278867301"
+      }
     },
     {
       "id": "23847457843610436",
       "name": "VLCC Facial Kit",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847472308730436",
+        "video_id": "3770157253078982",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "3770107956417245",
+            "title": "VLCC Facial Kit​",
+            "message": "Long day? Party in 20 MINUTES!!!!? \n\nFrom the comfort of her home, Divyanka gets glowing & healthy looking skin with the VLCC Papaya Facial Kit.\n\nGet this Parlour-like treatment @ FLAT 30% off + Extra 5% off on pre-paid orders AND get a 200ml Hand Sanitizer FREE! USE CODE: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=VLCC-Facial-Kit"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQLBOPZ1AYeffZT5aK5jQHLb1DUHFp3tq5ADtCjIdj6nKEjzD-kGQVNiacdvZ4J9Oj2K_8L9BvA5oWoU-1IAgjjYhz9Yfb0G_xTJFIK9vr57TLLJHmMAsNBrdXmcpJgnn1b7UolGMvF03ceLFDf_fGlA",
+            "image_hash": "671e0217759bbd2c0f5349f757a5ef1c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQEGDfoNik91nndV&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F136489924_155935826350705_3057053703442287370_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DhQqJXBuQv-sAX_N8887%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D3f0cad5a27560fb5169801f2093164a6%26oe%3D60BCA043&cfs=1&ccb=3-5&_nc_hash=AQH0pvy9UWrzAom6",
+        "effective_object_story_id": "1209491565742516_5486203408071289"
+      }
     },
     {
       "id": "23847420987890436",
       "name": "VLCC Sunscreens",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847755772530436",
+        "video_id": "472573104191219",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "438249140956949",
+            "title": "Huge discount on VLCC Sunscreen for Limited Period Only⏱️",
+            "message": "Waiting to get the perfect sunscreen this summer ⁉️\n\nGet your hands on the wide range of VLCC sunscreens available now at FLAT 30% OFF! Use Code: GLOW30 \n\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types \n\nHurry offer valid only for a limited period only. ⏳",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQKySVChUnVdMxVRC6kpG99N2LBq1Q3cvsJA-4eymQdjNkwUFtEFZlJyXTOA0H6bNYJXhePdbhMKh4gjMdfXhc3dPS1nls8EVeTUebjOOz8KdTH1sqTxdqE9vpLQPvHnQIhG-fKqyjRw7n_bcSZGK8Rh",
+            "image_hash": "bd958ba53a43054fb9739b0c95cde27c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F174488432_472573164191213_8715373876952934564_n.jpg%3Fccb%3D1-3%26_nc_ohc%3D6qGzCF7r64UAX92n6v3%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D42709353b6c8b91521db661617b3e498%26oe%3D60BD4D40&cfs=1&ccb=3-5&_nc_hash=AQF2WzK2cQGQIWtZ",
+        "effective_object_story_id": "1209491565742516_5708419929182968"
+      }
     },
     {
       "id": "23847671650440436",
       "name": "48 hours Left Post",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847755744270436",
+        "image_url": "https://scontent.fblr18-1.fna.fbcdn.net/v/t45.1600-4/166986599_23847671455750436_5112780654409931279_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=2aac32&_nc_ohc=qE6fmVgsSpkAX82o2KM&_nc_oc=AQkf2q5Fw7eaa_UdJYiWocqZU9E-Ik7PtWgGyP1ftZztfECDzq0BdXRRrZBx6nindDg&_nc_ht=scontent.fblr18-1.fna&oh=ba61365bacbb96ac67fa1cf57d428bdb&oe=60BC24C5",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=ATC&utm_content=48_hours_Left_Post",
+            "message": "You don’t want to miss out on this‼️\n\nLast 48hrs to shop from the wide range of VLCC Sunscreens😍 at FLAT 30% OFF😍.\nUSE CODE: GLOW30 to shop: \n\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types \n\nHurry offer valid only for a limited period only. ⏳",
+            "name": "Offer Ends in 48hours on VLCC Sunscreen⏳",
+            "attachment_style": "link",
+            "image_hash": "a42d3387ba232559cd970ae913982fa9",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFGyz8IQ0ZN2ig7&w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQJbHm2YCpoRqqbQnVClULdoyIBdXp32W8QXTs43ltrxZrU5DbPgtni_Tw4huHSBSLY_H7zcJg5nIdqrgeOa68-GUjYgk1MKuLUIFp18Vn37ja1blGx3TCmQoV2TW0Ug9pLOoHVhe9AWMzEvAbn5QEeo&cfs=1&ccb=3-5&_nc_hash=AQHsMUcbm0DIGXOE",
+        "effective_object_story_id": "1209491565742516_5708387452519549"
+      }
     },
     {
       "id": "23847416203830436",
       "name": "VLCC Sunscreens",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847780722790436",
+        "video_id": "474708333977696",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "438249140956949",
+            "title": "Huge discount on VLCC Sunscreen for Limited Period Only⏱️",
+            "message": "You don’t want to miss out on this‼️\n\nLast 3 days to shop from the wide range of VLCC sunscreens at FLAT 30% OFF. 😍\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types\n\nUse Code: GLOW30\n\nFree shipping on orders above INR 450/-",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQKySVChUnVdMxVRC6kpG99N2LBq1Q3cvsJA-4eymQdjNkwUFtEFZlJyXTOA0H6bNYJXhePdbhMKh4gjMdfXhc3dPS1nls8EVeTUebjOOz8KdTH1sqTxdqE9vpLQPvHnQIhG-fKqyjRw7n_bcSZGK8Rh",
+            "image_hash": "bd958ba53a43054fb9739b0c95cde27c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFST6LO9gQ6ALSX&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F170273022_474708403977689_1567185024263860118_n.jpg%3Fccb%3D1-3%26_nc_ohc%3D9xl1rLzRL9YAX_lbGl6%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3Dc4200375095c7b0498798629e8bb4e2e%26oe%3D60BC9DE9&cfs=1&ccb=3-5&_nc_hash=AQHLTpLqSpYI72l1",
+        "effective_object_story_id": "1209491565742516_5723616040996690"
+      }
     },
     {
       "id": "23847416013370436",
       "name": "Charcoal Range - Video",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847351364250436",
+        "video_id": "233345191771876",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "231328928640169",
+            "title": "VLCC Charcoal Range",
+            "message": "OFFER ALERT! Nourish your skin with Natural Sciences for a radiant glow and healthy skin. \n\nGet FLAT 30% off + 5% off on prepaid orders. \nUse coupon code: GLOW30",
+            "link_description": "The VLCC Charcoal Range provides skin-deep nourishment, for a healthy skin. With 100% Activated Charcoal, bid goodbye to stubborn blackheads, excess oil and dirt.",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/ingredient/charcoal.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Sales"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQIvjNbdRYekjPIfGw6GpT5wG8OihYRDUCqN88U5JwMQlLwDTtcDRN1NADaKVo92W7EjCMq9g5DJlE9q7t0kahkzkq1toVEgBjXxhL1d98YkJwyWa-26VfAP7qZM41KopXx3waL-GSpZoYwWBqrLVRLD",
+            "image_hash": "81436401108118260fd92e88a396917b"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQGkfYvzGi6MlJ5G&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F146442330_170606281258786_8154183447442536286_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DG3756wdCYCgAX-pQhxf%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D7749f0d7aa45afcd8d90776a61d47671%26oe%3D60BD4BBC&cfs=1&ccb=3-5&_nc_hash=AQFPuzQAORcphr6p",
+        "effective_object_story_id": "1209491565742516_5389900444368253"
+      }
     },
     {
       "id": "23847457811890436",
       "name": "VLCC Facial Kit",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847518394080436",
+        "video_id": "3788058661288841",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "3770107956417245",
+            "title": "VLCC Facial Kit",
+            "message": "Long day? Party in 20 MINUTES!!!!? \n\nFrom the comfort of her home, Divyanka gets glowing & healthy looking skin with the VLCC Papaya Facial Kit.\n\nGet this Parlour-like treatment @ FLAT 30% off + Extra 5% off on pre-paid orders AND get a 200ml Hand Sanitizer FREE! USE CODE: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/vlcc-papaya-fruit-single-facial-kit.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=VLCC-Papaya-Facial-Kit"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQLBOPZ1AYeffZT5aK5jQHLb1DUHFp3tq5ADtCjIdj6nKEjzD-kGQVNiacdvZ4J9Oj2K_8L9BvA5oWoU-1IAgjjYhz9Yfb0G_xTJFIK9vr57TLLJHmMAsNBrdXmcpJgnn1b7UolGMvF03ceLFDf_fGlA",
+            "image_hash": "671e0217759bbd2c0f5349f757a5ef1c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQEGDfoNik91nndV&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F136489924_155935826350705_3057053703442287370_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DhQqJXBuQv-sAX_N8887%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D3f0cad5a27560fb5169801f2093164a6%26oe%3D60BCA043&cfs=1&ccb=3-5&_nc_hash=AQH0pvy9UWrzAom6",
+        "effective_object_story_id": "1209491565742516_5516069171751379"
+      }
     },
     {
       "id": "23847491778500436",
       "name": "Haldi Chandan Facewash",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847491789320436",
+        "video_id": "159887659295931",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "159839022634128",
+            "title": "VLCC Haldi Chandan Facewash",
+            "message": "Nauheed restores and enhances her natural glow with the VLCC Haldi & Chandan Face Wash made with Ayurvedic Herbs.\n\nGet FLAT 30% off + Extra 5% off on pre-paid orders AND get a 200ml Hand Sanitizer FREE! \n\nUSE CODE: GLOW30\n\nShop Now!",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/face-care/face-wash-cleanser.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Haldi_Chandan_facewash"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQIbJBFb7L92YAm8Jgz9gRJ0EEsiUXPUQ7JnTkFQ2WgzmKNqf4n1kQ6GygL01Mr3ZhMPDJnSTxCVhmCBfkMz5dGPpj0PMCP7L_gZSYMighvNCGTiBU8xUKSzFistIWSzZ6vBTOmfF-gc1ajS-5kU1PMk",
+            "image_hash": "b2f40965bcf9c1589b7c5944e2398238"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQG69laaib3s8rS8&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F145651771_1112641802533733_1360423698944643445_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DXnAPzv65RTYAX_bIyra%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3Df0dbcecc8a511eacc0e036a05ae4ce7f%26oe%3D60BBB78D&cfs=1&ccb=3-5&_nc_hash=AQEh4ED3D97sZ-jG",
+        "effective_object_story_id": "1209491565742516_5499315866760043"
+      }
     },
     {
       "id": "23847650604680436",
       "name": "Offer Post",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "issues_info": [
+        {
+          "level": "AD",
+          "error_code": 3260012,
+          "error_summary": "Confirm domain selection on ad",
+          "error_message": "Confirm domain selection on ad: We suggest reviewing the ad to confirm that the domain we've automatically selected is the domain where you intend for conversions to happen. With Apple's iOS 14 changes, each ad needs to have a domain selected so that we know where to measure conversions. If the domain we've selected isn't where you want to measure conversions, then you may only get partial reporting. You can review the domain in the Tracking section of your ad.",
+          "error_type": "SOFT_ERROR"
+        }
+      ],
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847755737130436",
+        "image_url": "https://scontent.fblr18-1.fna.fbcdn.net/v/t45.1600-4/164806532_23847650616110436_1971767688052703596_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=2aac32&_nc_ohc=wCTbqpbmiWYAX_JQW6C&_nc_ht=scontent.fblr18-1.fna&oh=35ca6874da0752cffb81ce8f96941dd4&oe=60BC871C",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=ATC&utm_content=Offer_post",
+            "attachment_style": "link",
+            "image_hash": "5377f91df5d849abc4279bced6e1ac0c",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQH6B9nfFpuSkxNi&w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIhwRvRpvOyfpUGuV1V5kOGisVVYemo3uiQw-n00u5QiLid3czQ63TpG-hyjJl_F6fLAmhCabTleatkxiKcqe8RVp0PB0t_SiJX7p1sAgKaSrFDcxP1-N_TBlir7-CDguOLm7p4YChXd1pHry6dBTuY&cfs=1&ccb=3-5&_nc_hash=AQFYhX_ycjyy1nRh",
+        "effective_object_story_id": "1209491565742516_5708379752520319"
+      }
     },
     {
       "id": "23847599756770436",
       "name": "Charcoal Video",
-      "status": "PAUSED"
+      "effective_status": "DISAPPROVED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847599779510436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "2969537246637108",
+            "title": "Charcoal & Moroccan Clay Deep Purifying Scrub",
+            "message": "Clogged Pores? Blackheads? The VLCC Charcoal & Moroccan Clay is the perfect solution. Add this natural & paraben-free formulation to your skincare and get:\n\nü  A refined glow \nü  An even skin tone \nü  Rid of Dead Skin Cells\n\nUse Code: GLOW30 for 30% OFF on your order. Free shipping above 449/-",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/vlcc-charcoal-moroccan-clay-deep-purifying-scrub-90gm.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Charcoal_Video"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQIJxgSEATe7veEytBGkpIe8cLruL7s39m_e19xtV01VRBN-_8eNqxLyTxSjqrTG4CBTyN4ivQILkuWcXpOwkvFPCtBMeQxmGPuM4reegZ9wx-SrQMtjWlh9n7CIuqzF7MLXTkQR_-zFhG1Y95MDkoZA",
+            "image_hash": "88f6ba8dc613af39b883a24d98effe8d"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFjMUcKDbCdCDeU&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft1.6435-9%2F185510338_5823314001026893_7794276169743940369_n.jpg%3Fccb%3D1-3%26_nc_ohc%3D74_R8l0xkdMAX8GFaP-%26_nc_oc%3DAQmDoKl2qcAlv9KiIxMf22i8HQ7AYwKCfXdNUxACwSffMkI8H4KNGukydphhKAix6G0%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D8eddcef46678bc612a45b5e1c523c3a5%26oe%3D60DC7167&cfs=1&ccb=3-5&_nc_hash=AQFovJxEmyzcwKK3",
+        "effective_object_story_id": "1209491565742516_5574226849268944"
+      }
     },
     {
       "id": "23847451078390436",
       "name": "Facial kit",
-      "status": "ACTIVE"
+      "effective_status": "DISAPPROVED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847779054080436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+            "message": "Get the 'Parlour-like Glow' at home with the bestselling VLCC Facial Kits! \nNOW @ 😮FLAT 30% OFF + Extra 5% OFF on Prepaid Orders \nUSE CODE: GLOW30 \n\n✨Hurry! Offer valid for a limited period⏱️ only.",
+            "attachment_style": "link",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            },
+            "child_attachments": [
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+                "image_hash": "762319196655443cfa8d753135402cde",
+                "name": "30% Off on VLCC  Bamboo Charcoal Facial Kit for short period only ⌛",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+                "image_hash": "7b02071ebf5acf6cfdd6048fdb5c89f6",
+                "name": "30% Off on VLCC  Gold Facial Kit for short period only ⌛",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+                "image_hash": "cd318551880b761f136b0b4e34b9ac5d",
+                "name": "30% Off on VLCC Diamond  Facial Kit for short period only ⌛",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+                "image_hash": "a0cda2b03095f1af5205546b264e7390",
+                "name": "30% Off on VLCC Pearl Facial Kit for short period only ⌛",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=BO_Conversions&utm_content=Facial_kit",
+                "image_hash": "445844e4d2d20375f53f6ba4a350c4da",
+                "name": "30% Off on VLCC Anti Tan Facial Kit for short period only ⌛",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              }
+            ],
+            "multi_share_end_card": true,
+            "multi_share_optimized": true
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQEJqgg80EmLN0Mr&w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIOXD6zXInA9oHbJptGM9zQnFMjAlD9ee5VsLozdp8qBBfUJFjlXgZ4QMjGWmfNj8-BB3pbaak6EbZeQo8vtr0wwzLC0h4tJI5YnXMsyf3zlWjsPtZd4FBIzCCkpKQosSyxdmzeLNCzhN62JalwD-bw&cfs=1&ccb=3-5&_nc_hash=AQGKKsbke0KKcoxJ",
+        "effective_object_story_id": "1209491565742516_5722770467747914"
+      }
     },
     {
       "id": "23847709192960436",
       "name": "24 hours Left Post",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847755742130436",
+        "image_url": "https://scontent.fblr18-1.fna.fbcdn.net/v/t45.1600-4/170641152_23847679768900436_741417184148381043_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=2aac32&_nc_ohc=sZrzxvqhXpkAX94OOVi&_nc_ht=scontent.fblr18-1.fna&oh=0b2c424101409de41b8ccf81ab9c4e0e&oe=60BBFE54",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=ATC&utm_content=24_hours_Left_Post",
+            "message": "You don’t want to miss out on this‼️\n\nLast 24hrs to shop from the wide range of VLCC Sunscreens😍 at FLAT 30% OFF😍.\nUSE CODE: GLOW30 to shop: \n\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types \n\nHurry offer valid only for a limited period only. ⏳",
+            "name": "Offer Ends in 24hours on VLCC Sunscreen⏳",
+            "attachment_style": "link",
+            "image_hash": "764648a9da69c44434ab0e551aedeedc",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFP0yoGEkDT7DYu&w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIlQO7NF-jTwQgThwIhXdZm7URResayZVWKJ0ZDwtlo5pcVpnt0patHSZpHBizEcG9O6Ua7unj5yAuSu_0s60ZeYqBrx-aOdWUt9BSiZUABXEEeJ0iqEIvXT5vux5V4mq7RE_5W-dzxsoAGChGejQpf&cfs=1&ccb=3-5&_nc_hash=AQHVZgDcSkQ7D_31",
+        "effective_object_story_id": "1209491565742516_5708384862519808"
+      }
     },
     {
       "id": "23847416013540436",
       "name": "Walnut Coconut Scrub",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847651820120436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630"
+        },
+        "effective_object_story_id": "1209491565742516_5612327278792234"
+      }
     },
     {
       "id": "23847416013450436",
       "name": "Haldi Chandan Face Wash",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847651817450436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630"
+        },
+        "effective_object_story_id": "1209491565742516_5612326328792329"
+      }
     },
     {
       "id": "23847416013510436",
       "name": "Coffee Peel Off Mask",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847651820190436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630"
+        },
+        "effective_object_story_id": "1209491565742516_5612327345458894"
+      }
     },
     {
       "id": "23847416013430436",
       "name": "Multiple Product Carousel",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847351214670436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630"
+        },
+        "effective_object_story_id": "1209491565742516_5389756341049330"
+      }
     },
     {
       "id": "23847416013420436",
       "name": "Ubtan",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847651817460436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630"
+        },
+        "effective_object_story_id": "1209491565742516_5612326408792321"
+      }
     },
     {
       "id": "23847763443840436",
       "name": "Multi Product Carousel – Copy 2",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847763445570436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+            "message": "It's still not too late ⏳\nGet the 'Parlour-like Glow'🌟 at home with the bestselling VLCC Facial Kits! \nNOW @ FLAT 30% OFF + Extra 5% OFF on Prepaid Orders \nUSE CODE: GLOW30 \n\nHurry!🔥 Offer valid for a limited period only.",
+            "attachment_style": "link",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            },
+            "child_attachments": [
+              {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+                "image_hash": "df5651ff4527311e27831d37a1c0a8bf",
+                "name": "Hurry!🔥  30+5% Off on all VLCC Facial Kits",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                },
+                "video_id": "891275735058057"
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/vlcc-diamond-single-facial-kit-60gm.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+                "image_hash": "cd318551880b761f136b0b4e34b9ac5d",
+                "name": "30% Off on VLCC Diamond Facial Kit For 2Days",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/anti-tan-single-facial-kit.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+                "image_hash": "445844e4d2d20375f53f6ba4a350c4da",
+                "name": "30% Off on VLCC Anti Tan Facial Kit For 2Days",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/gold-single-facial-kit-60gm.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+                "image_hash": "7b02071ebf5acf6cfdd6048fdb5c89f6",
+                "name": "30% Off on VLCC Gold Facial Kit For 2Days",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              },
+              {
+                "link": "https://www.vlccpersonalcare.com/vlcc-papaya-fruit-single-facial-kit.html?utm_source=FB&utm_medium=CPM&utm_campaign=Jan_March_Email_list&utm_content=Muti_Product_carousel",
+                "image_hash": "671e0217759bbd2c0f5349f757a5ef1c",
+                "name": "30% Off on VLCC Papaya Facial Kit For 2Days",
+                "call_to_action": {
+                  "type": "SHOP_NOW"
+                }
+              }
+            ],
+            "multi_share_end_card": false,
+            "multi_share_optimized": true
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQGyu3LTfFKGuC37&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F174433295_898642170988080_6456335661400328031_n.jpg%3Fccb%3D1-3%26_nc_ohc%3Df9nD8JykYDYAX8ydXE1%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D63415b315159b59e9a10b4b63a53fd94%26oe%3D60BCF47B&cfs=1&ccb=3-5&_nc_hash=AQGSq9dhzeyCHO-g",
+        "effective_object_story_id": "1209491565742516_5713259795365648"
+      }
     },
     {
       "id": "23847678214010436",
       "name": "VLCC Facial Kit",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847678260130436",
+        "video_id": "3865282546899785",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "3770107956417245",
+            "title": "Get ready in 20 minutes with VLCC Papaya Facial Kit",
+            "message": "Long day? Party in 20 MINUTES!!!!? \n\nFrom the comfort of her home, Divyanka gets glowing & healthy-looking skin with the VLCC Papaya Facial Kit.\n\nGet this Parlour-like treatment @ FLAT 30% off.USE CODE: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/facial-kit-html.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=Customer_List_lookalike&utm_content=VLCC-Facial-Kit"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQLBOPZ1AYeffZT5aK5jQHLb1DUHFp3tq5ADtCjIdj6nKEjzD-kGQVNiacdvZ4J9Oj2K_8L9BvA5oWoU-1IAgjjYhz9Yfb0G_xTJFIK9vr57TLLJHmMAsNBrdXmcpJgnn1b7UolGMvF03ceLFDf_fGlA",
+            "image_hash": "671e0217759bbd2c0f5349f757a5ef1c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQEGDfoNik91nndV&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F136489924_155935826350705_3057053703442287370_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DhQqJXBuQv-sAX_N8887%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D3f0cad5a27560fb5169801f2093164a6%26oe%3D60BCA043&cfs=1&ccb=3-5&_nc_hash=AQH0pvy9UWrzAom6",
+        "effective_object_story_id": "1209491565742516_5640439485981013"
+      }
     },
     {
       "id": "23847643408690436",
       "name": "VLCC Sunscreens",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847754688170436",
+        "video_id": "472479337533929",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "438249140956949",
+            "title": "Huge discount on VLCC Sunscreen for Limited Period Only⏱️",
+            "message": "Waiting to get the perfect sunscreen this summer ⁉️\n\nGet your hands on the wide range of VLCC sunscreens available now at FLAT 30% OFF! Use Code: GLOW30 \n\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types \n\nHurry offer valid only for a limited period only. ⏳",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=Customer_List_Lookalike&utm_content=Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQKySVChUnVdMxVRC6kpG99N2LBq1Q3cvsJA-4eymQdjNkwUFtEFZlJyXTOA0H6bNYJXhePdbhMKh4gjMdfXhc3dPS1nls8EVeTUebjOOz8KdTH1sqTxdqE9vpLQPvHnQIhG-fKqyjRw7n_bcSZGK8Rh",
+            "image_hash": "bd958ba53a43054fb9739b0c95cde27c"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQFjB2p896IWtbyI&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.5256-10%2F174427781_472479364200593_2704131119847485004_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DxhWn3JUdRmsAX_DH_a5%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D893e6731193ae45f2048325456f19a4d%26oe%3D60BC5D7B&cfs=1&ccb=3-5&_nc_hash=AQEBRRiVT9pXGZO-",
+        "effective_object_story_id": "1209491565742516_5707880989236862"
+      }
     },
     {
       "id": "23847686657490436",
       "name": "24 Hours Left",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847779039370436",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=Customer_lookalike&utm_content=24_hours_Left_Post",
+            "message": "You don’t want to miss out on this‼️\n\nThe last 24hours left to shop from the wide range of VLCC sunscreens at FLAT 30% OFF. 😍\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types\n\nUse Code: GLOW30\n\nFree shipping on orders above INR 450/-",
+            "name": "Offer Ends in 24hours on VLCC Sunscreen⏳",
+            "attachment_style": "link",
+            "image_hash": "764648a9da69c44434ab0e551aedeedc",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "effective_object_story_id": "1209491565742516_5722760124415615"
+      }
     },
     {
       "id": "23847671445070436",
       "name": "48 hours Left Post",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847700052930436",
+        "image_url": "https://scontent.fblr18-1.fna.fbcdn.net/v/t45.1600-4/166986599_23847671455750436_5112780654409931279_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=2aac32&_nc_ohc=qE6fmVgsSpkAX82o2KM&_nc_oc=AQkf2q5Fw7eaa_UdJYiWocqZU9E-Ik7PtWgGyP1ftZztfECDzq0BdXRRrZBx6nindDg&_nc_ht=scontent.fblr18-1.fna&oh=ba61365bacbb96ac67fa1cf57d428bdb&oe=60BC24C5",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=Customer_List_lookalike&utm_content=48_hours_Left_Post",
+            "message": "It's still not too late! ⏳\nThe last 48hours left to shop from the wide range of VLCC sunscreens at FLAT 30% OFF. 😍\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types\n\nUse Code: GLOW30\n\nFree shipping on orders above INR 450/-",
+            "name": "Offer Ends in 48 Hours on all VLCC SPF Sunscreen⏳",
+            "attachment_style": "link",
+            "image_hash": "a42d3387ba232559cd970ae913982fa9",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQEqh7WQxHdtEIn2&w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKo99v6WRQjQQMonbAGJioZ_ChKt1yumc-wpbfsoUQJl01kl3OFv5bgFVHlWJigqL78b4BQ2uGE7MzMapx6lfzf14EO3A6nvEIqo_n8f3QA39vXbI_7M8f6X1XkkuMP_Pbj_0AeA_14ytl2d3Bs0z6c&cfs=1&ccb=3-5&_nc_hash=AQFbXFt3A8rNhmPu",
+        "effective_object_story_id": "1209491565742516_5662794930412135"
+      }
     },
     {
       "id": "23847637672050436",
       "name": "SPF 50 Sunscreen",
-      "status": "PAUSED"
+      "effective_status": "PAUSED",
+      "status": "PAUSED",
+      "creative": {
+        "id": "23847638095320436",
+        "video_id": "455932115670073",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "video_data": {
+            "video_id": "455904525672832",
+            "title": "VLCC De-Tan SPF 50 Sunscreen",
+            "message": "Get Summer Ready with VLCC De-Tan SPF 50 Sunscreen. \n \n✅Lightweight gel crème formula\n✅Non greasy \n✅Absorbs fast \n✅Suitable for all skin types \n\nShop now at 30% OFF + Extra 5% off on prepaid orders! \nUse code: GLOW30",
+            "call_to_action": {
+              "type": "SHOP_NOW",
+              "value": {
+                "link": "https://www.vlccpersonalcare.com/vlcc-de-tan-spf-50-sunscreen-gel-creme-100-gm.html?utm_source=FB&utm_medium=CPM&utm_campaign=Customer_List_Lookalike&utm_content=SPF_50_Sunscreen"
+              }
+            },
+            "image_url": "https://www.facebook.com/ads/image/?d=AQJ8DFOS1cPTzScLb6WXgGeO2GobFns3sN2jb1nR-YoImVdxFa-ZD4gYC1KhJ6oVtIAV4zWbBNUfeJQNst4tKXa7kaigFlz0J_-IkUm-tQ5KH7Mv-uE2iCporEWDo3YNfKPmn8_fj4S_UCimlZH6-2-L",
+            "image_hash": "2614e911a47d1ef5df2677f88b998597"
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?d=AQGA7XlTEEt8nUqi&w=64&h=64&url=https%3A%2F%2Fscontent.fblr18-1.fna.fbcdn.net%2Fv%2Ft15.13418-10%2F159628132_261432232324920_1796348359540791244_n.jpg%3Fccb%3D1-3%26_nc_ohc%3DeY22vH_NN4UAX996fsS%26_nc_ht%3Dscontent.fblr18-1.fna%26oh%3D81a916c1d7e52f58ece9ef4fc9d83019%26oe%3D60BC6405&cfs=1&ccb=3-5&_nc_hash=AQHVo6rHscVYMW8_",
+        "effective_object_story_id": "1209491565742516_5602363359788626"
+      }
     },
     {
       "id": "23847651001750436",
       "name": "Offer Post",
-      "status": "ACTIVE"
+      "effective_status": "CAMPAIGN_PAUSED",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "23847755727270436",
+        "image_url": "https://scontent.fblr18-1.fna.fbcdn.net/v/t45.1600-4/164806532_23847650616110436_1971767688052703596_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=2aac32&_nc_ohc=wCTbqpbmiWYAX_JQW6C&_nc_ht=scontent.fblr18-1.fna&oh=35ca6874da0752cffb81ce8f96941dd4&oe=60BC871C",
+        "object_story_spec": {
+          "page_id": "1209491565742516",
+          "instagram_actor_id": "1133870413388630",
+          "link_data": {
+            "link": "https://www.vlccpersonalcare.com/skin-care/sun-care/sunscreen.html?utm_source=FBIG&utm_medium=CPM&utm_campaign=Customer_List_lookalike&utm_content=Offer_post",
+            "message": "You don’t want to miss out on this‼️\n\nLast 2 days to shop from the wide range of VLCC sunscreens at FLAT 30% OFF. 😍\n✅ Light-weight \n✅ Quick Absorption (No white cast) \n✅ Suitable for all skin types\n\nUse Code: GLOW30\n\nFree shipping on orders above INR 450/-",
+            "name": "Hurry!! Offer Ends in 2 Days on all VLCC SPF Sunscreen⏳",
+            "attachment_style": "link",
+            "image_hash": "5377f91df5d849abc4279bced6e1ac0c",
+            "call_to_action": {
+              "type": "SHOP_NOW"
+            }
+          }
+        },
+        "thumbnail_url": "https://external.fblr18-1.fna.fbcdn.net/safe_image.php?w=64&h=64&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQJ8wcpKbB74Tm-PgAE_Vidw0XA35HK8l2Oeea5XfMjVlk3DPhQ71jiFQlTaeGRZc2KFoyib8EOeSpiOvdavZgWKXpyzI_gANl9AB0vD3Dng0daOOEAeha8lR3LkClSDCsaJmEvZ-40cDwK828RrJrDE&cfs=1&ccb=3-5&_nc_hash=AQFUo45U0fqk8KWi",
+        "effective_object_story_id": "1209491565742516_5708371055854522"
+      }
     }
   ],
   "paging": {
@@ -131,6 +720,6 @@
       "before": "QVFIUjFlVFp4QmxodWZASc0tSaHp3YThfejVUeGFlcHRiSnBrTk5aRFNlY0tfMzByY2VxekZAjMmpDd2ZAhSGI4WGVTV0FBQ3B5WnhjTFQ2OVFXdm02X2duT1JB",
       "after": "QVFIUjRyWi1pT1QwdWZA1VzlSVmxlZA0NxTkhBQnBzelVSTF9WeHRyS2J1WjdQRFRsRHdZAalN3N01tbFc5dUUyWTI3MXU1LUd3NjN0ckFuSkxmXzdONGhDbzhn"
     },
-    "next": "https://graph.facebook.com/v10.0/act_311236996426897/ads?access_token=EAAB5hYFo0J8BAOCruQZCOclJLLAr0rkaTNSQOH9FiOkPzXrApqo6JZA8dyRhYC4AITF1BBClZCgZAJ4QBCD0BZAdI9ege2WxyvxmvXngFFieQsLD8H9Tx7nFPhWk3yGqzjbxVHKU9KzR0c0eD6tVBdRZAXsjbTvpZAM5l5yCbEpbqnIPHCNfHEr&fields=id%2Cname%2Cstatus&limit=25&after=QVFIUjRyWi1pT1QwdWZA1VzlSVmxlZA0NxTkhBQnBzelVSTF9WeHRyS2J1WjdQRFRsRHdZAalN3N01tbFc5dUUyWTI3MXU1LUd3NjN0ckFuSkxmXzdONGhDbzhn"
+    "next": "https://graph.facebook.com/v10.0/act_311236996426897/ads?access_token=EAAB5hYFo0J8BAOCruQZCOclJLLAr0rkaTNSQOH9FiOkPzXrApqo6JZA8dyRhYC4AITF1BBClZCgZAJ4QBCD0BZAdI9ege2WxyvxmvXngFFieQsLD8H9Tx7nFPhWk3yGqzjbxVHKU9KzR0c0eD6tVBdRZAXsjbTvpZAM5l5yCbEpbqnIPHCNfHEr&fields=id%2Cname%2Ceffective_status%2Cissues_info%2Cstatus%2Ccreative%7Bid%2Cimage_url%2Cvideo_id%2Cobject_story_spec%2Cthumbnail_url%2Ceffective_object_story_id%2Curl_tags%2Cobject_story_id%7D&limit=25&after=QVFIUjRyWi1pT1QwdWZA1VzlSVmxlZA0NxTkhBQnBzelVSTF9WeHRyS2J1WjdQRFRsRHdZAalN3N01tbFc5dUUyWTI3MXU1LUd3NjN0ckFuSkxmXzdONGhDbzhn"
   }
 }

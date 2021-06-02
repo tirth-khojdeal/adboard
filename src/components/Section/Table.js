@@ -15,19 +15,13 @@ import MtHead from "@material-ui/core/TableHead";
 import MtRow from "@material-ui/core/TableRow";
 import TableContainer from "@material-ui/core/TableContainer";
 import Popover from "@material-ui/core/Popover";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import PropTypes from "prop-types";
 
-import { Box, Button, Checkbox, Container, FormControlLabel, FormGroup, Grid, InputBase, List, ListItem, ListItemIcon, ListItemText, MenuItem, Select, Typography } from "@material-ui/core";
+import { Box, Button,Container, Grid, InputBase, List, ListItem, MenuItem, Select, Typography } from "@material-ui/core";
 
-const TrTableContainer = withStyles({
-  root: {
-    borderRadius: 3,
-    border: 0,
-    width:"100%",
-    color: "white",
-    padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-  },
-})(TableContainer);
 const TrMtRow=withStyles({
     root:{
         backgroundColor:"#797ef6",
@@ -87,7 +81,38 @@ const IndeterminateCheckbox = React.forwardRef(
   }
 );
 
-export default function Table({ columns: userColumns, data, renderRowSubComponent }) {
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <>{children}</>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function Table({ columns: userColumns, data, renderRowSubComponent,renderRowSub2Component }) {
   const {
     getTableProps, // table props from react-table
     getTableBodyProps, // table body props from react-table
@@ -125,18 +150,13 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
     useRowSelect,
     (hooks) => {
       hooks.visibleColumns.push((columns) => [
-        // Let's make a column for selection
         {
           id: "selection",
-          // The header can use the table's getToggleAllRowsSelectedProps method
-          // to render a checkbox
           Header: ({ getToggleAllRowsSelectedProps }) => (
             <div>
               <IndeterminateCheckbox {...getToggleAllRowsSelectedProps()} />
             </div>
           ),
-          // The cell can use the individual row's getToggleRowSelectedProps method
-          // to the render a checkbox
           Cell: ({ row }) => (
             <div>
               <IndeterminateCheckbox {...row.getToggleRowSelectedProps()} />
@@ -149,212 +169,351 @@ export default function Table({ columns: userColumns, data, renderRowSubComponen
   );
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
+  const handleClick = (event) => {setAnchorEl(event.currentTarget);};
+  const handleClose = () => {setAnchorEl(null);};
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
-    <TrTableContainer component={Paper}>
-      <Box display="flex" flexDirection="row-reverse" p={1}>
-        <Button
-          aria-describedby={id}
-          variant="contained"
-          color="primary"
-          onClick={handleClick}
-        >
-          Columns
-        </Button>
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "center",
-          }}
-        >
-          <Grid item xs={12} md={6}>
-            <List>
-              <ListItem>
-                <Typography color="primary">
-                  <IndeterminateCheckbox {...getToggleHideAllColumnsProps()} />{" "}
-                  Toggle All
-                </Typography>
-              </ListItem>
-              {allColumns.map((column) => (
-                <Typography color="primary" key={column.id}>
+    <>
+      <Box display="flex" flexDirection="column" p={1}>
+        <AppBar position="relative">
+          <Tabs
+            flexDirection="flex-start"
+            value={value}
+            onChange={handleChange}
+            aria-label="simple tabs example"
+          >
+            <Tab label="Campaigns" {...a11yProps(0)} />
+            <Tab label="Adsets" {...a11yProps(1)} />
+            <Tab label="Ads" {...a11yProps(2)} />
+          </Tabs>
+          <Button
+            aria-describedby={id}
+            variant="contained"
+            color="secondary"
+            onClick={handleClick}
+            style={{ position: "absolute", right: "0px", top: "6px" }}
+          >
+            Columns
+          </Button>
+        </AppBar>
+        <TabPanel value={value} index={0}>
+          <TableContainer component={Paper}>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+            >
+              <Grid item xs={12} md={6}>
+                <List>
                   <ListItem>
-                    <input type="checkbox" {...column.getToggleHiddenProps()} />
-                    {column.id}
+                    <Typography color="primary">
+                      <IndeterminateCheckbox
+                        {...getToggleHideAllColumnsProps()}
+                      />
+                      Toggle All
+                    </Typography>
                   </ListItem>
-                </Typography>
-              ))}
-            </List>
-          </Grid>
-        </Popover>
-      </Box>
-
-      <Box display="flex" flexDirection="row-reverse" style={{overflowX:"auto"}} p={1}>
-        <MtTable {...getTableProps()}>
-          <MtHead>
-            {headerGroups.map((headerGroup) => (
-              <TrMtRow {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <MtCell
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                    className={
-                      column.isSorted
-                        ? column.isSortedDesc
-                          ? "sort-desc"
-                          : "sort-asc"
-                        : ""
-                    }
-                  >
-                    {column.render("Header")}
-                    <span>
-                      {column.isSorted
-                        ? column.isSortedDesc
-                          ? " 🔽"
-                          : " 🔼"
-                        : ""}
-                    </span>
-                  </MtCell>
+                  {allColumns.map((column) => (
+                    <Typography color="primary" key={column.id}>
+                      <ListItem>
+                        <input
+                          type="checkbox"
+                          {...column.getToggleHiddenProps()}
+                        />
+                        {column.id}
+                      </ListItem>
+                    </Typography>
+                  ))}
+                </List>
+              </Grid>
+            </Popover>
+            <MtTable {...getTableProps()}>
+              <MtHead>
+                {headerGroups.map((headerGroup) => (
+                  <TrMtRow {...headerGroup.getHeaderGroupProps()}>
+                    {headerGroup.headers.map((column) => (
+                      <MtCell
+                        {...column.getHeaderProps(
+                          column.getSortByToggleProps()
+                        )}
+                        className={
+                          column.isSorted
+                            ? column.isSortedDesc
+                              ? "sort-desc"
+                              : "sort-asc"
+                            : ""
+                        }
+                      >
+                        {column.render("Header")}
+                        <span>
+                          {column.isSorted
+                            ? column.isSortedDesc
+                              ? " 🔽"
+                              : " 🔼"
+                            : ""}
+                        </span>
+                      </MtCell>
+                    ))}
+                  </TrMtRow>
                 ))}
-              </TrMtRow>
-            ))}
-          </MtHead>
+              </MtHead>
 
-          <MtBody {...getTableBodyProps()}>
-            {page.map((row, i) => {
-              prepareRow(row);
-              const rowProps = row.getRowProps();
-              return (
-                <Fragment key={row.getRowProps().key}>
-                  <MtRow {...row.getRowProps()}>
-                    {row.cells.map((cell) => {
-                      return (
-                        <MtCell {...cell.getCellProps()}>
-                          {cell.render("Cell")}
-                          {/* {JSON.stringify(row)} */}
-                        </MtCell>
-                      );
-                    })}
-                  </MtRow>
-                  {row.isExpanded && (
-                    <>
-                      {/* <MtRow style={{ backgroundColor: "coral" }}>
-                      <MtCell colSpan={3}></MtCell>
-                      <MtCell>CLICKS</MtCell>
-                      <MtCell>CPC</MtCell>
-                      <MtCell>SPEND</MtCell>
-                      <MtCell>CTR</MtCell>
-                      <MtCell>REACH</MtCell>
-                      <MtCell>IMPRESSIONS</MtCell>
-                      <MtCell>DATE_START</MtCell>
-                      <MtCell>DATE_STOP</MtCell>
-                    </MtRow> */}
-                      {/* <MtRow colSpan={visibleColumns.length}> */}
-                      {renderRowSubComponent({ row, rowProps, visibleColumns })}
-                      {/* </MtRow> */}
-                    </>
-                  )}
-                </Fragment>
-              );
-            })}
-          </MtBody>
-        </MtTable>
-        {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              selectedRowIds: selectedRowIds,
-              "selectedFlatRows[].original": selectedFlatRows.map(
-                (d) => d.original
-              ),
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
+              <MtBody {...getTableBodyProps()}>
+                {page.map((row, i) => {
+                  prepareRow(row);
+                  const rowProps = row.getRowProps();
+                  return (
+                    <Fragment key={row.getRowProps().key}>
+                      <MtRow {...row.getRowProps()}>
+                        {row.cells.map((cell) => {
+                          return (
+                            <MtCell {...cell.getCellProps()}>
+                              {cell.render("Cell")}
+                              {/* {JSON.stringify(row)} */}
+                            </MtCell>
+                          );
+                        })}
+                      </MtRow>
+                      {row.isExpanded && (
+                        <>
+                          {renderRowSubComponent({
+                            row,
+                            rowProps,
+                            visibleColumns,
+                          })}
+                        </>
+                      )}
+                      {row.isExpanded && (
+                        <>
+                          {renderRowSub2Component({
+                            row,
+                            rowProps,
+                            visibleColumns,
+                          })}
+                        </>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </MtBody>
+            </MtTable>
+            <Container color="primary" className="pagination">
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => gotoPage(0)}
+                disabled={!canPreviousPage}
+              >
+                {"<<"}
+              </Button>
+              <Button
+                variant="contained"
+                onClick={() => previousPage()}
+                disabled={!canPreviousPage}
+              >
+                {"<"}
+              </Button>
+              <Button
+                variant="contained"
+                onClick={() => nextPage()}
+                disabled={!canNextPage}
+              >
+                {">"}
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => gotoPage(pageCount - 1)}
+                disabled={!canNextPage}
+              >
+                {">>"}
+              </Button>
+
+              <Typography color="primary" component="span">
+                Page
+                <strong>
+                  {pageIndex + 1} of {pageOptions.length}
+                </strong>
+              </Typography>
+
+              <Typography color="primary" component="span">
+                | Go to page:
+                <BootstrapInput
+                  type="number"
+                  defaultValue={pageIndex + 1}
+                  onChange={(e) => {
+                    const page = e.target.value
+                      ? Number(e.target.value) - 1
+                      : 0;
+                    gotoPage(page);
+                  }}
+                  style={{ width: "100px" }}
+                />
+              </Typography>
+              <Select
+                value={pageSize}
+                onChange={(e) => {
+                  setPageSize(Number(e.target.value));
+                }}
+              >
+                {[5, 10, 25].map((pageSize) => (
+                  <MenuItem key={pageSize} value={pageSize}>
+                    Show {pageSize}
+                  </MenuItem>
+                ))}
+              </Select>
+            </Container>
+          </TableContainer>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <TableContainer component={Paper}>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+            >
+              <Grid item xs={12} md={6}>
+                <List>
+                  <ListItem>
+                    <Typography color="primary">
+                      <IndeterminateCheckbox
+                        {...getToggleHideAllColumnsProps()}
+                      />
+                      Toggle All
+                    </Typography>
+                  </ListItem>
+                  {allColumns.map((column) => (
+                    <Typography color="primary" key={column.id}>
+                      <ListItem>
+                        <input
+                          type="checkbox"
+                          {...column.getToggleHiddenProps()}
+                        />
+                        {column.id}
+                      </ListItem>
+                    </Typography>
+                  ))}
+                </List>
+              </Grid>
+            </Popover>
+            <MtTable {...getTableProps()}>
+              <MtBody {...getTableBodyProps()}>
+                {page.map((row, i) => {
+                  prepareRow(row);
+                  const rowProps = row.getRowProps();
+                  return (
+                    <Fragment key={row.getRowProps().key}>
+                      <>
+                        {renderRowSubComponent({
+                          row,
+                          rowProps,
+                          visibleColumns,
+                        })}
+                      </>
+                      {row.isExpanded && (
+                        <>
+                          {renderRowSub2Component({
+                            row,
+                            rowProps,
+                            visibleColumns,
+                          })}
+                        </>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </MtBody>
+            </MtTable>
+          </TableContainer>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <TableContainer component={Paper}>
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+            >
+              <Grid item xs={12} md={6}>
+                <List>
+                  <ListItem>
+                    <Typography color="primary">
+                      <IndeterminateCheckbox
+                        {...getToggleHideAllColumnsProps()}
+                      />{" "}
+                      Toggle All
+                    </Typography>
+                  </ListItem>
+                  {allColumns.map((column) => (
+                    <Typography color="primary" key={column.id}>
+                      <ListItem>
+                        <input
+                          type="checkbox"
+                          {...column.getToggleHiddenProps()}
+                        />
+                        {column.id}
+                      </ListItem>
+                    </Typography>
+                  ))}
+                </List>
+              </Grid>
+            </Popover>
+            <MtTable {...getTableProps()}>
+              <MtBody {...getTableBodyProps()}>
+                {page.map((row, i) => {
+                  prepareRow(row);
+                  const rowProps = row.getRowProps();
+                  return (
+                    <Fragment key={row.getRowProps().key}>
+                        <>
+                          {renderRowSub2Component({
+                            row,
+                            rowProps,
+                            visibleColumns,
+                          })}
+                        </>
+                    </Fragment>
+                  );
+                })}
+              </MtBody>
+            </MtTable>
+          </TableContainer>
+        </TabPanel>
       </Box>
-      <Container color="primary" className="pagination">
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => gotoPage(0)}
-          disabled={!canPreviousPage}
-        >
-          {"<<"}
-        </Button>
-        <Button
-          variant="contained"
-          onClick={() => previousPage()}
-          disabled={!canPreviousPage}
-        >
-          {"<"}
-        </Button>
-        <Button
-          variant="contained"
-          onClick={() => nextPage()}
-          disabled={!canNextPage}
-        >
-          {">"}
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => gotoPage(pageCount - 1)}
-          disabled={!canNextPage}
-        >
-          {">>"}
-        </Button>
-
-        <Typography color="primary" component="span">
-          Page
-          <strong>
-            {pageIndex + 1} of {pageOptions.length}
-          </strong>
-        </Typography>
-
-        <Typography color="primary" component="span">
-          | Go to page:
-          <BootstrapInput
-            type="number"
-            defaultValue={pageIndex + 1}
-            onChange={(e) => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0;
-              gotoPage(page);
-            }}
-            style={{ width: "100px" }}
-          />
-        </Typography>
-        <Select
-          value={pageSize}
-          onChange={(e) => {
-            setPageSize(Number(e.target.value));
-          }}
-        >
-          {[5, 10, 25].map((pageSize) => (
-            <MenuItem key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </MenuItem>
-          ))}
-        </Select>
-      </Container>
-    </TrTableContainer>
+    </>
   );
 }
